@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import React, {useEffect, useState} from 'react';
+import Ratings_Review_Container from './Components/Rating-Review-Container';
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <div className="App">
-    Hello World
+    <Ratings_Review_Container />
     </div>
   )
 }
