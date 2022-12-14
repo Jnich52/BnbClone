@@ -1,13 +1,14 @@
-import { useState } from 'react'
+import React, {useEffect, useState} from 'react';
+import Ratings_Review_Container from './Components/Rating-Review-Container';
 import Reservation from './Components/Reservation.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <div className="App">
-    Hello World
+    <Ratings_Review_Container />
     <Reservation></Reservation>
     </div>
   )
