@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import './Reservation.css'
 
 function Reservation() {
 
@@ -26,6 +27,13 @@ function Reservation() {
                 <div id="reservationCard"> 
                 <text>Filler Text</text><br></br>
                 <text>Filler Text</text><br></br>
+                <button type="button" class="reserveButton">
+                    <span class="outerReserveSpan">
+                        <span class="innerReserveSpan" style={{'backgroundPosition': `calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%); --mouse-x:46.0586; --mouse-y:7.11668`}}>
+                        </span>
+                    </span>
+                    <span class="ReserveText">Reserve </span>
+                </button>
                 <text>Filler Text</text><br></br>
                 <text>Filler Text</text><br></br>
                 <text>Filler Text</text><br></br>
