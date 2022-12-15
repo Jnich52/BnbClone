@@ -2,8 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const {Client} = require('pg');
 
-const NODE_ENV = 'proudction';
-
 const config = require('./config.js')[process.env.NODE_ENV||"dev"];
 const PORT = config.port;
 const client = new Client ({connectionString: config.connectionString});
