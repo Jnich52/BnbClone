@@ -15,7 +15,8 @@
     "react-datepicker": "^4.8.0",
     "react-datetime-picker": "^4.1.1",
     "react-dom": "^18.2.0",
-    "rsuite": "^5.23.2"
+    "rsuite": "^5.23.2",
+    "axios": "^0.24.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

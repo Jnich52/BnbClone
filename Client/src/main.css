@@ -13,6 +13,7 @@
   gap: 10px;
   background-color: white;
   padding: 10px;
+  padding-left: 20%;
 }
 
 .grid-container > div {
@@ -20,4 +21,20 @@
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
+}
+
+body{
+  display: flex;
+  align-content: center;
+}
+#root{
+  display: flex;
+  max-width: 80%;
+  background-color: rgb(255, 255, 255);
+  margin: 0px;
+  line-break: strict;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 20px !important;  
 }
