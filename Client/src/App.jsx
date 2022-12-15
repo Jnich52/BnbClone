@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Ratings_Review_Container from './Components/Rating-Review-Container';
+import AirCover from './Components/AirCover';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import PropertyDetails from './Components/Property-Details';
 
 function App() {
@@ -7,8 +9,8 @@ function App() {
 
   return (
     <div className="App">
-    <PropertyDetails />
-    <Ratings_Review_Container show={show} setShow={setShow}/>
+    <Ratings_Review_Container />
+    <PropertyDetails show={show} setShow={setShow} />
     </div>
   )
 }

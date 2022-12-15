@@ -7,8 +7,8 @@ const Ratings = (props) => {
     // for (let i = 0; i < ratingArray.length; i++) {
     //   ratingAverage += ratingArray[i];
     // }
-
     // //return ratingAverage / ratingArray.length;
+    
     return ratingAverage;
   }
 
