@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Card, Button, CardGroup } from 'react-bootstrap';
-import 'Property_Details.css'
+import AboutThisSpaceModal from "./AboutThisSpace-Modal";
+import AirCoverModal from "./AirCover-Modal";
+import AmenitiesModal from "./Amenities-Modal";
+import './Property-Details.css'
 
 const PropertyDetails = (props) => {
+
 return(
-  <CardGroup>
+  <CardGroup className='card-group'>
     <Card>Property Hosted By:</Card>
-    <Card>Check-In, Host Experience, Cancellation</Card>
-    <Card>aircover</Card>
-    <Card>About this space </Card>
-    <Card>Sleeping Accommodations</Card>
-    <Card>What this place offers(amenities)
-      <Button style={outline-dark}></Button>
-    </Card>
+    <Card className='data-box'>Check-In, Host Experience, Cancellation</Card>
+    <AirCoverModal />
+    <AboutThisSpaceModal />
+    <Card className='data-box'>Sleeping Accommodations</Card>
+    <AmenitiesModal />
   </CardGroup>
 )
 }
