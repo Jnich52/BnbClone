@@ -9,7 +9,7 @@ const PropertyDetails = (props) => {
 
 return(
   <CardGroup className='card-group'>
-    <Card>Property Hosted By:</Card>
+    <Card>Property Hosted By: WHITE'S TEST</Card>
     <Card className='data-box'>Check-In, Host Experience, Cancellation</Card>
     <AirCoverModal />
     <AboutThisSpaceModal />
@@ -17,6 +17,8 @@ return(
     <AmenitiesModal />
   </CardGroup>
 )
+
 }
 
 export default PropertyDetails
+
