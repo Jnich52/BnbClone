@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Card, Button, Modal, CloseButton } from 'react-bootstrap';
 
-const AmenitiesModal = (props) => {
+const AmenitiesModal = () => {
   
-
-  const handleClose = () => props.setShow(false);
-  const handleShow = () => props.setShow(true);
+  const [show, setShow] = useState(false);
+  
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <Card className='property-card'>
@@ -13,11 +14,11 @@ const AmenitiesModal = (props) => {
         Show more
       </Button>
 
-      <Modal show={props.show} onHide={handleClose}>
-        <Modal.Header >
-          <CloseButton />
+      <Modal show={show} size='xl' onHide={handleClose}>
+        <Modal.Header className='modal-header' closeButton>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body className='modal-body'>
+        </Modal.Body>
       </Modal>
     </Card>
   );

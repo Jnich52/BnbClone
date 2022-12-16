@@ -9,12 +9,12 @@ const PropertyDetails = (props) => {
 
 return(
   <CardGroup className='card-group'>
-    <Card>Property Hosted By: WHITE'S TEST</Card>
-    <Card className='data-box'>Check-In, Host Experience, Cancellation</Card>
-    <AirCoverModal />
-    <AboutThisSpaceModal />
-    <Card className='data-box'>Sleeping Accommodations</Card>
-    <AmenitiesModal />
+    <Card className='property-card'>Property Hosted By: WHITE'S TEST</Card>
+    <Card className='property-card'>Check-In, Host Experience, Cancellation</Card>
+    <AirCoverModal {...props}/>
+    <AboutThisSpaceModal {...props} />
+    <Card className='property-card'>Sleeping Accommodations</Card>
+    <AmenitiesModal {...props} />
   </CardGroup>
 )
 
