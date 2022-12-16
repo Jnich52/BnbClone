@@ -1,3 +1,20 @@
+
+body{
+  display: flex;
+}
+
+#root{
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  margin-left: 10em;
+  margin-right: 10em;
+  line-break: strict;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400 !important;
+  font-size: 1em !important;
+  line-height: 1.25em !important;  
+}
+
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; }
 .item3 { grid-area: main; }
@@ -21,20 +38,4 @@
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
-}
-
-body{
-  display: flex;
-  align-content: center;
-}
-#root{
-  display: flex;
-  max-width: 80%;
-  background-color: rgb(255, 255, 255);
-  margin: 0px;
-  line-break: strict;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400 !important;
-  font-size: 16px !important;
-  line-height: 20px !important;  
 }

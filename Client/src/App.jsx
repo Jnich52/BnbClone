@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import Ratings_Review_Container from './Components/Rating-Review-Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Review_Comment_Container from "./Components/Review-Comment-Container"
 import Reservation from './Components/Reservation.jsx';
@@ -6,11 +7,10 @@ import './Components/Reservation.css';
 import PropertyDetails from './Components/Property-Details';
 
 function App() {
-  const [show, setShow] = useState(false);
 
   return (
     <div className="App">
-      <div style={{textAlign:'center'}}>
+          <div style={{textAlign:'center'}}>
         <text><h1>Up in the Air BnB</h1></text>
       </div>
       
@@ -36,6 +36,12 @@ function App() {
           
       </div>
     
+    <PropertyDetails />
+    <Ratings_Review_Container />
+
+
+    
+
     </div>
   )
 }

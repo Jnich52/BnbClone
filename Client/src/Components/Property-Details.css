@@ -1,21 +1,40 @@
 .card-group{
   display: flex;
   flex-flow: column nowrap;
-  min-width: 744px
+  border: none;
 }
 
 .property-card {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: var(--f-k-smk-x);
-  font-size: var(--iw-ehf-f);
-  line-height: var(---s-l-myu);
-  min-height: 50px;
-  max-width: 1120px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: #222222;
+  font-size: 1em;
+  line-height: 1.25em;
+  min-height: 4em;
+  max-width: 70em;
   border-top: .04em solid rgb(221, 221, 221);
-  max-width: 1120px;
 }
 
+.card-header{
+  background-color: rgb(255,255,255);
+  border-bottom: none;
+}
+
+
+
+
+button{
+  writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
+    cursor: default;
+}
 
 
 .aircover-btn{
@@ -26,25 +45,97 @@
   line-height: inherit !important;
   appearance: none !important;
   background: transparent !important;
-  border: 0px !important;
+  border: 0 !important;
   cursor: pointer !important;
-  margin: 0px !important;
-  padding: 0px !important;
+  margin: 0!important;
+  padding: 0 !important;
   user-select: auto !important;
   color: rgb(34, 34, 34) !important;
   text-decoration: underline !important;
-  border-radius: 4px !important;
+  border-radius: 0.25em !important;
   font-weight: 600 !important;
   text-align: inherit !important;
   outline: none !important;
 }
 
+.aircover-btn:hover{
+  color: black;
+}
+
 .aircover-img {
-  margin-bottom: 16px;
-  height: 26px;
+  margin-bottom: 1em;
+  height: 1.625em;
 }
 
 .card-body{
-  margin-bottom: 16px;
-  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+/* .modal{
+  height: 100vh;
+  width: 100vw;
+} */
+
+
+
+.closebtn:focus::after{
+  border: none;
+}
+
+.modal-header{
+  display: flex;
+  justify-items: left;
+  color: inherit !important;
+  font-size: 1em !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  border-bottom: none;
+
+}
+.modal-header .btn-close{
+  padding: 0.5em 0.5em;
+  margin-left: 1em;
+  margin-top: .25em;
+}
+
+.btn-close {
+  display: flex;
+  justify-self: left;
+  border-radius: 1em;
+  background-size: .625em;
+}
+
+.btn-close:hover{
+  background-color: #f0f0f0;
+}
+
+.modal-body{
+  padding: 2em;
+  color: #717171;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+h4{
+  color: #222222;
+  font-size: 1em;
+  font-weight: 600;
+}
+.first-paragraph{
+  padding-bottom: 1.5em;
+  border-bottom: 0.0625em solid #DDDDDD;
+}
+
+a{
+  color: rgb(34, 34, 34);
+  font-weight: 600;
+}
+
+a:hover{
+color: black;
+}
+
+.modal-img{
+  height: 2em;
+  margin-bottom: 1em;
 }
