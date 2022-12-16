@@ -1,0 +1,46 @@
+#reviews-comment-section{
+    width: 100%;
+}
+
+/* Profile Image */
+.profile-picture-image{
+    grid-area: a;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+
+}
+
+.ratings-title{
+    text-align: left;
+    margin-bottom: 1.5em;
+}
+
+.stats-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.stats-category{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+.stats-category-category{
+    margin-left: 0px;
+}
+.progress{
+    width: 30%;
+    height: 5px;
+    margin-left: auto;
+
+}
+.stats-category-rate{
+    margin-right: 1em;
+    margin-left: 1em;
+}
