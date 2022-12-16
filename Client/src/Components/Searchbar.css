@@ -1,0 +1,23 @@
+/* height: 20px;
+    width: 70px;
+    z-index: 10;
+    border-radius: 10px;
+    border: none;
+    background: solidcolor white
+.searchInputs {
+    width: 1500px;
+    height: 10px;
+    align-content: center;
+    margin: 10px;
+
+  }
+
+  .inputBox {
+
+    height: 20px;
+    width: 120px;
+    z-index: 10;
+    border-radius: 10px;
+    border: none;
+    background: #000; /* Set the bg image here. with "no-repeat" */
+  /* } */ 

@@ -8,24 +8,15 @@
 }
 
 #reservationCardContainer {
-    position: sticky !important;
-    z-index: 1 !important;
     width: 100% !important;
-    display: inline-block !important;
     padding-right: 1px !important;
-}
-.react-datepicker-popper{
-    min-width: auto;
-    display: flex;
 }
 
 #reserveButton {
     cursor: pointer !important;
-    display: inline-block !important;
     margin: 0px !important;
     margin-top: 5% !important;
     margin-bottom: 5% !important;
-    position: relative !important;
     text-align: center !important;
     text-decoration: none !important;
     touch-action: manipulation !important;
