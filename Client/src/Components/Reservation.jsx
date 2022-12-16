@@ -90,11 +90,7 @@ function Reservation() {
 
     return (
     <html>
-        <head>
-        </head>
-        <body>
-
-            <div id="reservationCard"> 
+            <div id="reservationCard" className='sticky'> 
 
             <div id="textbox">
                 <span class="alignleft" id='nightlyRate' style={{fontSize:'xx-large', textDecoration:'none'}}>$<strong>{ nightlyRate ? nightlyRate.toLocaleString() : defaultRate.toLocaleString() }</strong>
@@ -316,8 +312,6 @@ function Reservation() {
             <div style={{clear: 'both'}}></div>
             
             </div>
-
-        </body>
     </html>
     )
 }
