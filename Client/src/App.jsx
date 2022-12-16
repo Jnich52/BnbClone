@@ -32,7 +32,6 @@ function App() {
         <div class="item5">
         <Review_Comment_Container />
         </div>
-          
       </div>
     </div>
   )

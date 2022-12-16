@@ -44,3 +44,42 @@
     margin-right: 1em;
     margin-left: 1em;
 }
+.profile-section-container{
+    border: 2px solid lime;
+    min-width: 100%;
+    max-height: 650px;
+    
+    margin-top: 2em;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+.commentEntry{
+    font-size: .6em;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+    min-width: fit-content
+}
+.commentEntry > .top{
+    background-color: yellow;
+    display: flex;
+}
+.commentEntry > .top > .profile-text-wrapper{
+    text-align: left;
+    margin-left: .2em;
+}
+.commentEntry > .bottom{
+    background-color: aqua;
+    text-align: left;
+    line-height: 1;
+    
+
+}
+.commentEntry > .bottom > .profile-review{
+    margin: .1em;
+    word-wrap: break-word;
+    
+}
