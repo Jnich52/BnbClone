@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "./Components/navbar";
+import React, { useEffect, useState, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Review_Comment_Container from "./Components/Review-Comment-Container";
 import Reservation from "./Components/Reservation.jsx";
 import "./Components/Reservation.css";
 import PropertyDetails from "./Components/Property-Details";
+import Navbar from "./Components/Navbar.jsx";
+import "./Components/Navbar.css";
 
 function App() {
   return (
@@ -16,9 +17,7 @@ function App() {
       </div>
 
       <div style={{ textAlign: "center" }}>
-        <text>
-          <h1>---Navbar Will Go Here---</h1>
-        </text>
+        <Navbar />
       </div>
 
       <div class="grid-container">
