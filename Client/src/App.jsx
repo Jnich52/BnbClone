@@ -6,11 +6,10 @@ import './Components/Reservation.css';
 import PropertyDetails from './Components/Property-Details';
 
 function App() {
-  const [show, setShow] = useState(false);
 
   return (
     <div className="App">
-      <div style={{textAlign:'center'}}>
+          <div style={{textAlign:'center'}}>
         <text><h1>Up in the Air BnB</h1></text>
       </div>
       
@@ -23,7 +22,7 @@ function App() {
         </div>
 
         <div class="item3">
-        <PropertyDetails show={show} setShow={setShow} />
+        <PropertyDetails />
         </div>
 
         <div class="item4">
@@ -35,7 +34,6 @@ function App() {
         </div>
           
       </div>
-    
     </div>
   )
 }
