@@ -1,19 +1,8 @@
-#R-R-Container{
+#reviews-comment-section{
     width: 100%;
 }
-.profile-section-container{
-    display: grid;
-    grid-template-areas: "a b b"
-                         "c c c";
-    grid-template-columns: .1fr 2fr;
-    width: 50%;
-    font-family: sans-serif;
-    font-weight: 300;
-}
-.profile-section-container > a{
-    margin: auto;
-}
 
+/* Profile Image */
 .profile-picture-image{
     grid-area: a;
     border-radius: 50%;
@@ -21,60 +10,37 @@
     width: 50px;
 
 }
-#profile-text-wrapper{
-    grid-area: b;
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    margin-left: 5px;
-}
-.profile-name {
-    margin: 0;
-}
-.profile-join-date{
-    margin: 0;
-}
-.profile-review{
-    grid-area: c;
-}
 
-
-
-
-
-
-.AirCover{
-    font-size: 110%;
-    font-family: sans-serif;
-    font-weight: 300;
-}
-
-#AirCover-Img{
-    margin-top: 1.5em;
+.ratings-title{
+    text-align: left;
     margin-bottom: 1.5em;
 }
 
-#AirCover-Learn{
-    text-decoration: underline;
-    font-weight: bold;
-    margin-bottom: 1.5em;
-}
-
-#AirCover-Learn:hover{
-    cursor: pointer;
-}
-
-.rating-bars-container{
+.stats-section{
     display: flex;
     flex-direction: row;
-    width: 50%;
-    font-size: 110%;
-    font-family: sans-serif;
-    font-weight: 300;
-    margin-right: 70%;
-    align-items: center;
-    text-align: center;
+    flex-wrap: wrap;
 }
-.rating-bar-category{
-    margin-right: 70%;
+
+
+.stats-category{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+.stats-category-category{
+    margin-left: 0px;
+}
+.progress{
+    width: 30%;
+    height: 5px;
+    margin-left: auto;
+
+}
+.stats-category-rate{
+    margin-right: 1em;
+    margin-left: 1em;
 }

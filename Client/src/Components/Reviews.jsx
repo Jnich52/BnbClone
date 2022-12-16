@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 
-const Reviews = (props) =>{
+const Reviews_Comments = (props) =>{
     return (
         <div className="profile-section-container">
             <a href="https://http.cat/103">
@@ -16,4 +16,4 @@ const Reviews = (props) =>{
 }
 
 
-export default Reviews
+export default Reviews_Comments;

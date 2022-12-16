@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import Ratings_Review_Container from './Components/Rating-Review-Container';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Review_Comment_Container from "./Components/Review-Comment-Container"
 import Reservation from './Components/Reservation.jsx';
 import './Components/Reservation.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import PropertyDetails from './Components/Property-Details';
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
         </div>
 
         <div class="item5">
-        <Ratings_Review_Container />
+        <Review_Comment_Container />
         </div>
           
       </div>
