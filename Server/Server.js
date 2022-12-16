@@ -2,8 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const {Client} = require('pg');
 
-const config = require('./Config.js')[process.env.NODE_ENV||"dev"];
-const port = config.port;
+const config = require('./config.js')[process.env.NODE_ENV||"dev"];
+const PORT = config.port;
 const client = new Client ({connectionString: config.connectionString});
 client.connect();
 
@@ -16,7 +16,7 @@ app.get('/', (req,res)=>{
     res.status(200).send('Hello World');
 });
 
-app.get('/api/#####', (req, res) => {
+app.get('/api/', (req, res) => {
     
     async function fromAll() {
         try {
@@ -30,14 +30,13 @@ app.get('/api/#####', (req, res) => {
         }
       }
     fromAll();
-
 })
 
 
-app.listen(port,()=>{
+app.listen(PORT,()=>{
     console.log(`
     Server Status: Live
-    Server Port: ${port}
+    Server Port: ${PORT}
     Waiting For Requests`
     )
 });
