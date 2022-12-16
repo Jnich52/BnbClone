@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Ratings = (props) => {
+const Ratings_Head = (props) => {
   function ratingCalculator(ratingArray) {
     let ratingAverage = 0;
 
@@ -23,10 +23,10 @@ const Ratings = (props) => {
   }
 
   return (
-    <div className="Star-Icon">
+    <div className="ratings-title">
       &#9733; {ratingCalculator()} {reviewCounter()}
     </div>
   );
 };
 
-export default Ratings;
+export default Ratings_Head;
