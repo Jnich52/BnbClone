@@ -8,12 +8,10 @@
   display: grid;
   grid-template-areas:
     'header header header header header header'
-    'main main main main main right'
+    'main main main main right right'
     'footer footer footer footer footer footer';
   gap: 10px;
   background-color: white;
-  padding: 10px;
-  padding-left: 20%;
 }
 
 .grid-container > div {
@@ -29,7 +27,7 @@ body{
 }
 #root{
   display: flex;
-  max-width: 80%;
+  max-width: 100%;
   background-color: rgb(255, 255, 255);
   margin: 0px;
   line-break: strict;
@@ -37,4 +35,6 @@ body{
   font-weight: 400 !important;
   font-size: 16px !important;
   line-height: 20px !important;  
+  margin-right: 15%;
+  margin-left: 15%
 }
