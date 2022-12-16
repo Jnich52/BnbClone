@@ -20,9 +20,6 @@
   border-bottom: none;
 }
 
-
-
-
 button{
   writing-mode: horizontal-tb !important;
     text-rendering: auto;
@@ -35,7 +32,6 @@ button{
     text-align: center;
     cursor: default;
 }
-
 
 .aircover-btn{
   font-size: inherit !important;
@@ -75,8 +71,6 @@ button{
   height: 100vh;
   width: 100vw;
 } */
-
-
 
 .closebtn:focus::after{
   border: none;
