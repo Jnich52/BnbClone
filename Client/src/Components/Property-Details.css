@@ -4,99 +4,97 @@
   border: none;
 }
 
-.property-card {
-  padding-top: 2em;
-  padding-bottom: 2em;
+.card{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   color: #222222;
-  font-size: 1em;
-  line-height: 1.25em;
-  min-height: 4em;
-  max-width: 70em;
-  border-top: .04em solid rgb(221, 221, 221);
+  font-size: 1rem;
+  line-height: 1.25rem;
+  min-height: 4rem;
+  max-height: 15rem;
+  min-width: 26.25rem;
+  max-width: 70rem;
+  border: none;
 }
 
+.property-card {
+  border-top: .04em solid rgb(221, 221, 221);
+}
 .card-header{
   background-color: rgb(255,255,255);
   border-bottom: none;
 }
 
-button{
-  writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    text-align: center;
-    cursor: default;
+.card-body{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 9rem;
 }
 
-.aircover-btn{
-  font-size: inherit !important;
-  font-family: inherit !important;
-  font-style: inherit !important;
-  font-variant: inherit !important;
-  line-height: inherit !important;
-  appearance: none !important;
-  background: transparent !important;
-  border: 0 !important;
-  cursor: pointer !important;
-  margin: 0!important;
-  padding: 0 !important;
-  user-select: auto !important;
-  color: rgb(34, 34, 34) !important;
-  text-decoration: underline !important;
-  border-radius: 0.25em !important;
-  font-weight: 600 !important;
-  text-align: inherit !important;
-  outline: none !important;
+.btn{
+  font-size: 1rem;
+  border: 0;
+  margin: 0;
+  padding: 1rem;
+  user-select: auto;
+  color: rgb(34, 34, 34);
+  border-radius: 0.25rem;
+  font-weight: 600;
+  outline: none;
+  width: fit-content;
+  text-align: left;
+    --bs-btn-bg: transparent;
+    --bs-btn-hover-color: black;
+    --bs-btn-active-color: black;
+    --bs-btn-disabled-color: #6c757d;
+    --bs-btn-disabled-border-color: transparent;
+    --bs-btn-box-shadow: none;
+    text-decoration: underline;
 }
 
-.aircover-btn:hover{
-  color: black;
+
+.amenities-btn{
+  border-width: .0625rem;
+  border-color: #222222;
+  border-radius: 0.5rem;
+  border-style: solid;
+  padding: .8125rem 1.4375rem;
+  cursor: default;
+  text-decoration: none;
+  text-align: center;
+  --bs-btn-hover-border-color: black;
 }
 
 .aircover-img {
-  margin-bottom: 1em;
-  height: 1.625em;
+  margin-bottom: 1rem;
+  height: 1.625rem;
 }
 
-.card-body{
-  margin-bottom: 1em;
-}
 
-/* .modal{
-  height: 100vh;
-  width: 100vw;
-} */
 
-.closebtn:focus::after{
-  border: none;
-}
+
 
 .modal-header{
   display: flex;
   justify-items: left;
-  color: inherit !important;
-  font-size: 1em !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: inherit;
+  line-height: inherit;
   border-bottom: none;
 
 }
 .modal-header .btn-close{
-  padding: 0.5em 0.5em;
-  margin-left: 1em;
-  margin-top: .25em;
+  padding: 0.5rem 0.5rem;
+  margin-left: 1rem;
+  margin-top: .25rem;
 }
 
 .btn-close {
   display: flex;
   justify-self: left;
-  border-radius: 1em;
-  background-size: .625em;
+  border-radius: 1rem;
+  background-size: .625rem;
 }
 
 .btn-close:hover{
@@ -104,20 +102,20 @@ button{
 }
 
 .modal-body{
-  padding: 2em;
+  padding: 2rem;
   color: #717171;
   font-weight: 400;
-  line-height: 1.5em;
+  line-height: 1.5rem;
 }
 
 h4{
   color: #222222;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 600;
 }
 .first-paragraph{
-  padding-bottom: 1.5em;
-  border-bottom: 0.0625em solid #DDDDDD;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.0625rem solid #DDDDDD;
 }
 
 a{
@@ -130,6 +128,6 @@ color: black;
 }
 
 .modal-img{
-  height: 2em;
-  margin-bottom: 1em;
+  height: 2rem;
+  margin-bottom: 1rem;
 }

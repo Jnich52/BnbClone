@@ -5,13 +5,13 @@ body{
 #root{
   display: flex;
   background-color: rgb(255, 255, 255);
-  margin-left: 10em;
-  margin-right: 10em;
+  margin-left: 10rem;
+  margin-right: 10rem;
   line-break: strict;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400 !important;
-  font-size: 1em !important;
-  line-height: 1.25em !important;  
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem; 
 }
 
 .item1 { grid-area: header; }
@@ -34,12 +34,11 @@ body{
     'header header header header header header'
     'main main main main main right'
     'footer footer footer footer footer footer';
-  gap: 10px;
+  gap: .625rem;
   background-color: white;
-  padding: 10px;
+  padding: .625rem;
 }
 
 .grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
 }
