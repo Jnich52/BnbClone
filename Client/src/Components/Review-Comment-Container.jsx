@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Ratings_Head from "./Ratings";
 import "./Ratings-Review.css";
-import Reviews_Comments from "./Reviews";
+import Reviews_Comments from "./Reviews-Comment";
 import Stats_Section from "./Stats-Section";
 
 

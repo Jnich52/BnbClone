@@ -35,10 +35,7 @@ function App() {
           <Reservation/>
         </div>
 
-        <div class="item5">
-          <Review_Comment_Container />
-        </div>
-          
+        <div class="item5"><Review_Comment_Container/></div>
       </div>
     </div>
   )

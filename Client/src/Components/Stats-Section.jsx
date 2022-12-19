@@ -14,12 +14,6 @@ const Stats_Section = () => {
             {ratingArr.map((item) => (
             <Category cat={item}/>
             ))}
-            
-            
-            
-            {/* <div className='rating-bar-category'>Cleanliness</div>
-            <ProgressBar style={myStyle} now={3.8} min={0} max={5}/>
-            <div className='rating-bar-rating'>3.5</div> */}
         </div>
     )
 }
