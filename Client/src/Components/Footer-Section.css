@@ -1,0 +1,30 @@
+footer{
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+}
+#footer-details{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 2em;
+    width: fit-content;
+}
+
+#footer-details > section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+#footer-details > section > a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#footer-community{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}

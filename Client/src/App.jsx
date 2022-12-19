@@ -6,33 +6,26 @@ import './Components/Reservation.css';
 import PropertyDetails from './Components/Property-Details';
 import Navbar from './Components/Navbar.jsx'
 import './Components/Navbar.css'
+import Footer_Section from "./Components/Footer-Section";
 
 function App() {
 
   return (
     <div className="App">
-          <div style={{textAlign:'center'}}>
-        <text><h1>Up in the Air BnB</h1></text>
-      </div>
-      
-      <div style={{textAlign:'center'}}>
-      <Navbar/>
-      </div>
+      <header>
+        <Navbar/>
+      </header>
 
       <div class="grid-container">
-        <div class="item1">I M A G E S
-        </div>
-
-        <div class="item3">
-        <PropertyDetails />
-        </div>
-
-        <div class="item4">
-        <Reservation></Reservation>
-        </div>
-
-        <div class="item5"><Review_Comment_Container/></div>
+        <div class="item1">I M A G E S</div>
+        <div class="item2"><PropertyDetails/></div>
+        <div class="item3"><Reservation/></div>
+        <div class="item4"><Review_Comment_Container/></div>
       </div>
+
+      <footer>
+       <Footer_Section />
+      </footer>
     </div>
   )
 }
