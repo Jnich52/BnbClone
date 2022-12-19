@@ -35,7 +35,7 @@
     margin-left: 0px;
 }
 .progress{
-    width: 30%;
+    min-width: 30%;
     height: 5px;
     margin-left: auto;
 
@@ -46,9 +46,6 @@
 }
 .profile-section-container{
     border: 2px solid lime;
-    min-width: 100%;
-    max-height: 650px;
-    
     margin-top: 2em;
 
     display: flex;
@@ -57,11 +54,9 @@
     
 }
 .commentEntry{
-    font-size: .6em;
-    flex-grow: 1;
-    flex-shrink: 1;
-    overflow: hidden;
-    min-width: fit-content
+    font-size: 1em;
+    flex-basis: 50%;
+
 }
 .commentEntry > .top{
     background-color: yellow;
