@@ -32,6 +32,46 @@ app.get('/api/', (req, res) => {
     fromAll();
 })
 
+//GETS REVIEWS AND USER WHO SUBMITTED
+app.get('/api/reviews', (req,res) =>{
+  async function getReviews(){
+    try {
+      client.query(`SELECT reviews.id,
+       users.name,
+       reviews.comment,
+       reviews.cleanliness,
+       reviews.checkin,
+       reviews.location,
+       reviews.communication,
+       reviews.accuracy
+       FROM reviews 
+       INNER JOIN 
+       users on users.id = reviews.user_id;`)
+      .then(result =>{
+        res.status(200).send(result.rows)
+      })
+
+    } catch (error) {
+      res.status(404).send("Page Not Found")
+    }
+  }
+})
+
+app.get('/api/users', (req, res) => {
+    
+  async function getUsers() {
+      try {
+        client.query(`SELECT * FROM users`)
+        .then(result =>{
+          res.status(200).send(result.rows)
+        })
+      } catch (error) {
+        console.error(error);
+        res.status(404).send("Page Not Found")
+      }
+    }
+  getUsers();
+})
 
 app.listen(PORT,()=>{
     console.log(`
