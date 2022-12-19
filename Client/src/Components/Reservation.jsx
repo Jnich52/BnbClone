@@ -92,6 +92,7 @@ function Reservation() {
 
     return (
     <html>
+
             <div id="reservationCard" className='sticky'> 
 
             <div id="textbox">
@@ -126,7 +127,7 @@ function Reservation() {
             </div>
             <div style={{clear: 'both'}}></div>
 
-                <Calendar style={{width:'auto', overflow:'visible !important'}} {...calendarProps}/>
+                <Calendar style={{zIndex:'9999999999999999', width:'auto', overflow:'visible !important', position: 'absolute'}} {...calendarProps}/>
                 </div>
         
                 <div style={{marginTop: '1%', paddingBottom:'15%'}}>

@@ -17,15 +17,25 @@ body{
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; }
 .item3 { grid-area: main; }
+
+@media only screen and (max-width: 1200px){
+  .item4{
+    display: none;
+  }
+  .item3{
+    margin-right: -15%;
+  }
+} 
+
 .item4 { 
   grid-area: right;
   position: sticky !important;
   position: -webkit-sticky !important;
-  top: 0px;
+  top: 3em;
+  height: auto;
 }
 .item5 { 
   grid-area: footer;
-  position: sticky !important;
 }
 
 .grid-container {
