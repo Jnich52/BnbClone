@@ -130,7 +130,7 @@ function Reservation() {
                 <Calendar style={{zIndex:'9999999999999999', width:'auto', overflow:'visible !important', position: 'absolute'}} {...calendarProps}/>
                 </div>
         
-                <div style={{marginTop: '1%', paddingBottom:'15%'}}>
+                <div style={{marginTop: '1%', paddingBottom:'18%'}}>
                     <Dropdown className="d-inline mx-2" autoClose="outside" align="xl: start">
                         <Dropdown.Toggle id="dropdown-autoclose-outside" style={{backgroundColor: 'white', color:'black', borderColor: 'white', float: 'left', minWidth:'20em'}}>
                         <text style={{fontSize:'large'}}>  

@@ -24,7 +24,7 @@ function Reservation_Bar() {
                     <text style={{textDecoration:"underline"}}> 15 - 21 Jan</text>
                 </span>
 
-                <span class="alignright" style={{marginRight:'2em', paddingTop:'0.5 rem'}}>
+                <span class="alignright" style={{marginRight:'2em', marginTop:'0.5em'}}>
 
                     <Button id='reserveButton' onClick={() => setLgShow(true)}>Reserve</Button>
                     <Modal
