@@ -5,16 +5,17 @@
 }
 
 .card{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
   color: #222222;
   font-size: 1rem;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   min-height: 4rem;
   max-height: 15rem;
   min-width: 26.25rem;
   max-width: 70rem;
   border: none;
+
 }
 
 .property-card {
@@ -26,15 +27,18 @@
 }
 
 .card-body{
+  max-height: 9rem;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 9rem;
 }
 
 .btn{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
   font-size: 1rem;
   border: 0;
-  margin: 0;
+  margin-top: .5rem;
   padding: 1rem;
   user-select: auto;
   color: rgb(34, 34, 34);
@@ -49,6 +53,7 @@
     --bs-btn-disabled-color: #6c757d;
     --bs-btn-disabled-border-color: transparent;
     --bs-btn-box-shadow: none;
+
     text-decoration: underline;
 }
 
@@ -72,19 +77,24 @@
 
 
 
-
+.modal{
+  display: flex;
+  flex-flow: column nowrap;
+}
 
 .modal-header{
   display: flex;
   justify-items: left;
-  color: inherit;
+  color: rgb(34,34,34);
   font-size: 1rem;
-  font-weight: inherit;
+  font-weight: 800;
   line-height: inherit;
   border-bottom: none;
+  padding: 1.5rem 0 1.5rem 0;
 
 }
 .modal-header .btn-close{
+  max-height: 4rem;
   padding: 0.5rem 0.5rem;
   margin-left: 1rem;
   margin-top: .25rem;
@@ -101,11 +111,22 @@
   background-color: #f0f0f0;
 }
 
+.btn-close:focus{
+  border: none;
+  outline: none;
+}
+
+.modal-title{
+padding-left: 2rem;
+}
+
 .modal-body{
+  display: flex;
+  flex-flow: row wrap;
   padding: 2rem;
-  color: #717171;
   font-weight: 400;
   line-height: 1.5rem;
+  justify-content: space-between;
 }
 
 h4{
@@ -113,9 +134,18 @@ h4{
   font-size: 1rem;
   font-weight: 600;
 }
-.first-paragraph{
-  padding-bottom: 1.5rem;
+.first-para{
+  padding-bottom: 1rem;
   border-bottom: 0.0625rem solid #DDDDDD;
+  min-width: 100%;
+  line-height: 1.25rem;
+}
+
+.modal-para{
+  display: flex;
+  flex-flow: column nowrap;
+  flex-basis: 500px;
+  padding-bottom: 1rem;
 }
 
 a{
