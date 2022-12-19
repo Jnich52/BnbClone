@@ -10,10 +10,18 @@ const AboutThisSpaceModal = () => {
 
   return (
     <Card className='property-card'>
-      <Button variant="link" onClick={handleShow}>
+      <Card.Body><p>
+            Come make long-lasting memories by the lake, take in these amazing sunsets and enjoy 
+            lots of fun activities for the whole family - hiking, kayaking, horseback riding, swimming.
+          </p>
+          <p>
+            Relax in this amazing Tree House right on Sayersbrook lake. You’ll have a private hot tub, 
+            fireplace, fully furnished kitchen, beautiful handmade furniture, huge deck, and yes, those 
+            views of the 60-acre lake!!
+          </p></Card.Body>
+      <Button variant='link' className='aircover-btn' onClick={handleShow}>
         Show more
       </Button>
-
       <Modal show={show} size='xl' onHide={handleClose}>
         <Modal.Header className='modal-header' closeButton>
         </Modal.Header>
