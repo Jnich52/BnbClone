@@ -18,13 +18,13 @@ const Ratings_Head = (props) => {
     let reviewCount = 100; //DELETE WHEN DATA IS POPULATED;
 
     return reviewCount === 0 || reviewCount >= 2
-      ? `(${reviewCount} Reviews)`
-      : `(${reviewCount} Review)`;
+      ? `${reviewCount} Reviews`
+      : `${reviewCount} Review`;
   }
 
   return (
     <div className="ratings-title">
-      &#9733; {ratingCalculator()} {reviewCounter()}
+      &#9733; {ratingCalculator()} · {reviewCounter()}
     </div>
   );
 };

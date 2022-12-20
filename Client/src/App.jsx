@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Review_Comment_Container from "./Components/Review-Comment-Container";
 import Reservation from "./Components/Reservation.jsx";
+import Reservation_Bar from "./Components/Reservation-Bar.jsx";
 import "./Components/Reservation.css";
 import PropertyDetails from "./Components/Property-Details";
 import Navbar from "./Components/Navbar.jsx";
@@ -10,6 +11,8 @@ import "./Components/Navbar.css";
 function App() {
   return (
     <div className="App">
+      <Reservation_Bar />
+
       <div style={{ textAlign: "center" }}>
         <text>
           <h1>Up in the Air BnB</h1>
@@ -18,6 +21,9 @@ function App() {
 
       <div style={{ textAlign: "center" }}>
         <Navbar />
+      
+      <div style={{textAlign:'center'}}>
+        <Navbar/>
       </div>
 
       <div class="grid-container">
@@ -28,7 +34,11 @@ function App() {
         </div>
 
         <div class="item4">
-          <Reservation></Reservation>
+          <Reservation />
+        </div>
+
+        <div class="item5">
+          <Review_Comment_Container />
         </div>
 
         <div class="item5">

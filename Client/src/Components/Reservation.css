@@ -4,7 +4,8 @@
     padding: 24px;
     font-size: 100;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
-    width: 400px;
+    width: 450px;
+    margin-bottom: 5%;
 }
 
 #reservationCardContainer {
@@ -22,13 +23,18 @@
     touch-action: manipulation !important;
     outline: none !important;
     padding: 14px 24px !important;
-    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s !important;
-    -webkit-tap-highlight-color: transparent !important;
+    transition: all 0.2s ease-in-out;
     border: none !important;
     border-radius: 12px !important;
     background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%) !important;
     color: rgb(255, 255, 255) !important;
     width: 100% !important;
+}
+
+.glow-button:hover {
+    color: black;
+    box-shadow: 15px 15px black;
+    transform: translate(-5px)
 }
 
 .alignleft {
@@ -66,4 +72,8 @@
 
 .dropdown-item{
     cursor: default !important;
+}
+
+.rs-picker-menu{
+    z-index: 99999 !important;
 }
