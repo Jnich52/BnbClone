@@ -25,6 +25,12 @@ header {
   margin-right: 15%;
 
   display: grid;
+  grid-area: main;
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px !important;
   grid-template-areas:
     "a a a"
     "b b c"
