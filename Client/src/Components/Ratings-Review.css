@@ -1,5 +1,8 @@
 #reviews-comment-section{
     width: 100%;
+    background: white;
+    z-index: 99999;
+    position: relative;
 }
 
 /* Profile Image */
