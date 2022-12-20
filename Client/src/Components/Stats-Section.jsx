@@ -12,7 +12,7 @@ const Stats_Section = () => {
     return(
         <div className='stats-section'>
             {ratingArr.map((item) => (
-            <Category cat={item}/>
+            <Category id={item.id} cat={item}/>
             ))}
         </div>
     )
