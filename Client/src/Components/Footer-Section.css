@@ -49,7 +49,9 @@
     margin-right: auto;
     align-items: center;
 }
-
+#footer-details-bottom-left > a{
+    font-weight: 100;
+}
 #footer-details-bottom-left > a:last-child > svg{
     margin-left: 1em;
 }
@@ -81,7 +83,7 @@
 }
 
 #footer-details-bottom-right > :nth-child(3){
-    margin-left: 1.2em;
+    margin-left: 1.5em;
 }
 
 #footer-details-bottom-right > span {
