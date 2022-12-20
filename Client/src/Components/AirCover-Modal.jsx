@@ -17,7 +17,7 @@ const AirCoverModal = () => {
         Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.
       </Card.Body>
 
-      <Button variant='link' className='aircover-btn' onClick={handleShow}>
+      <Button variant='link' className='prop-details-btn' onClick={handleShow}>
         Learn more
       </Button>
 

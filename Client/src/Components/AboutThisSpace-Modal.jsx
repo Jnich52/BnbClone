@@ -22,7 +22,7 @@ const AboutThisSpaceModal = () => {
             views of the 60-acre lake!!...
           </p></Card.Body>
 
-          <Button  variant='link' className='aircover-btn' onClick={handleShow}>
+          <Button  variant='link' className='prop-details-btn' onClick={handleShow}>
             Show more
             <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" 
             style={{height: '12px', width: '12px', display: 'flex', fill: '#222222', marginLeft:'.25rem'}}>
