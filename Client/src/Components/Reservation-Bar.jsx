@@ -29,6 +29,8 @@ function Reservation_Bar() {
                     <Button id='reserveButton' onClick={() => setLgShow(true)}>Reserve</Button>
                     <Modal
                         show={lgShow}
+                        backdropClassName="reservation-bar-backdrop"
+                        contentClassName="reservation-bar-content"
                         onHide={() => setLgShow(false)}
                         aria-labelledby="example-modal-sizes-title-lg"
                     >

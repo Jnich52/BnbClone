@@ -2,16 +2,13 @@
     .reservation-bar {
         display: none !important;
     }
-    .fade.modal-backdrop.show {
-        display: none !important;
+    .reservation-bar-backdrop {
+      display: none !important;
     }
-    .fade.modal.show {
-        display: none !important;
+    .reservation-bar-content {
+      display: none !important;
     }
-    .modal-dialog.modal-lg {
-        display: none !important;
-    }
-}
+  }
   
   .reservation-bar{
     background: white !important;
