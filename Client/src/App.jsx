@@ -13,10 +13,10 @@ function App() {
   return (
     <div className="App">
 
-      <Reservation_Bar />
+      <Reservation_Bar/>
           
       <div style={{textAlign:'center'}}>
-        <text><h1>Up in the Air BnB</h1></text>
+        <h1>Up in the Air BnB</h1>
       </div>
       
       <div style={{textAlign:'center'}}>

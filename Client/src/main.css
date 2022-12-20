@@ -33,6 +33,7 @@ body{
   position: -webkit-sticky !important;
   top: 3em;
   height: auto;
+  scale: 0.8;
 }
 .item5 { 
   grid-area: footer;
