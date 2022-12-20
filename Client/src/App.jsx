@@ -10,7 +10,6 @@ import Footer_Section from './Components/Footer-Section';
 import './Components/Navbar.css'
 
 function App() {
-
   return (
     <div className="App">
           
@@ -34,4 +33,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
