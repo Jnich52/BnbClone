@@ -35,11 +35,13 @@
     align-items: center;
     margin-top: .5em;
     margin-bottom: .5em;
+    padding-right: 10%;
 }
 .stats-category-category{
     margin-left: 0px;
     font-size: medium;
 }
+
 .progress{
     min-width: 30%;
     height: 5px;
@@ -47,7 +49,7 @@
 
 }
 .stats-category-rate{
-    font-size: 1em;
+    font-size: small;
     font-weight: bold;
     margin-right: 1em;
     margin-left: 1em;
@@ -82,7 +84,7 @@
 }
 .commentEntry > .bottom > .profile-review{
     margin: .1em;
-    font-size: large;
+    font-size: medium;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
