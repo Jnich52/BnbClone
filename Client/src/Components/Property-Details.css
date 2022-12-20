@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: column nowrap;
   border: none;
+  max-height: min-content;
 }
 
 .card{
@@ -72,8 +73,6 @@
   margin-bottom: 1rem;
   height: 1.625rem;
 }
-
-
 
 .modal{
   display: flex;
