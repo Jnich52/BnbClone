@@ -17,7 +17,7 @@
 .ratings-title{
     text-align: left;
     margin-bottom: 1.5em;
-    font-size: x-large;
+    font-size: large;
     font-weight: bold;
 }
 
@@ -35,11 +35,13 @@
     align-items: center;
     margin-top: .5em;
     margin-bottom: .5em;
+    padding-right: 10%;
 }
 .stats-category-category{
     margin-left: 0px;
-    font-size: 1.3em;
+    font-size: medium;
 }
+
 .progress{
     min-width: 30%;
     height: 5px;
@@ -47,7 +49,7 @@
 
 }
 .stats-category-rate{
-    font-size: 1em;
+    font-size: small;
     font-weight: bold;
     margin-right: 1em;
     margin-left: 1em;
@@ -71,7 +73,7 @@
 }
 .commentEntry > .top > .profile-text-wrapper{
     text-align: left;
-    font-size: large;
+    font-size: medium;
     margin-left: .3em;
 }
 .commentEntry > .bottom{
@@ -82,7 +84,7 @@
 }
 .commentEntry > .bottom > .profile-review{
     margin: .1em;
-    font-size: x-large;
+    font-size: medium;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;

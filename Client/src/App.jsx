@@ -8,6 +8,8 @@ import PropertyDetails from './Components/Property-Details';
 import Navbar from './Components/Navbar.jsx'
 import Footer_Section from './Components/Footer-Section';
 import './Components/Navbar.css'
+import Other_Options from './Components/Other-Options';
+
 
 
 function App() {
@@ -18,14 +20,15 @@ function App() {
         <Navbar />
       </header>
 
-      <div class="grid-container">
-        <div class="item1">I M A G E S</div>
-        <div class="item3"><PropertyDetails /></div>
-        <div class="item4"><Reservation/></div>
-        <div class="item5"><Review_Comment_Container/></div>
+      <div className="grid-container">
+        <div className="item1">I M A G E S</div>
+        <div className="item3"><PropertyDetails /></div>
+        <div className="item4"><Reservation/></div>
+        <div className="item5"><Review_Comment_Container/></div>
       </div>
 
       <footer>
+          <Other_Options />
           <Footer_Section />
       </footer>
 
