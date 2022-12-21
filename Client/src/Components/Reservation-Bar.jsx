@@ -1,36 +1,46 @@
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import Reservation from './Reservation.jsx'
 import Button from 'react-bootstrap/Button';
-import Dropdown from 'react-bootstrap/Dropdown';
-import Calendar from './Calendar.jsx';
 import Modal from 'react-bootstrap/Modal';
 import './Reservation.css'
 import './Reservation-Bar.css'
 
 function Reservation_Bar() {
 
+    const [barNightlyRate, setBarNightlyRate] = useState(null);
+    const [barStartDate, setBarStartDate] = useState(null);
+    const [barEndDate, setBarEndDate] = useState(null);
     const [lgShow, setLgShow] = useState(false);
     const defaultRate = 1000;
 
+    let reservationProps = [
+        barNightlyRate, setBarNightlyRate,
+        barStartDate, setBarStartDate,
+        barEndDate, setBarEndDate,
+        lgShow, setLgShow
+    ]
+
     return(
-        <div class='reservation-bar'>
+        <div className='reservation-bar'>
 
             <div style={{clear: 'both'}}></div>
 
             <div id="textbox">
-                <span class="alignleft" style={{textDecoration:'none', marginLeft:'2em', marginTop:'1.5rem'}}>
-                    <text style={{fontSize:'1.5em'}}><strong>${defaultRate.toLocaleString()}</strong></text> night <br></br> 
-                    <text style={{textDecoration:"underline"}}> 15 - 21 Jan</text>
+                <span className="alignleft" style={{textDecoration:'none', marginLeft:'2em', marginTop:'1.5rem'}}>
+                    <span style={{fontSize:'1.5em'}}><strong>${defaultRate.toLocaleString()}</strong></span> night <br></br> 
+                    <span style={{textDecoration:"underline"}}> 15 - 21 Jan</span>
                 </span>
 
-                <span class="alignright" style={{marginRight:'2em', marginTop:'0.5em'}}>
+                <span className="alignright" style={{marginRight:'2em', marginTop:'0.5em'}}>
 
-                    <Button id='reserveButton' onClick={() => setLgShow(true)}>Reserve</Button>
+                    <Button id='reserveButton' onClick={() => setLgShow(!lgShow)}>Reserve</Button>
                     <Modal
                         show={lgShow}
                         backdropClassName="reservation-bar-backdrop"
                         contentClassName="reservation-bar-content"
+                        size="fullscreen"
+                        fullscreen="true"
                         onHide={() => setLgShow(false)}
                         aria-labelledby="example-modal-sizes-title-lg"
                     >
@@ -39,8 +49,8 @@ function Reservation_Bar() {
                             Your Trip
                         </Modal.Title>
                         </Modal.Header>
-                        <Modal.Body>.
-                            <Reservation/>
+                        <Modal.Body>
+                            <Reservation {...reservationProps}/>
                         </Modal.Body>
                     </Modal>
 
