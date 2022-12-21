@@ -13,7 +13,7 @@
     "main main main"
     "main main main"
     "foot foot foot";
-    grid-template-rows: .1fr 1fr 1fr .4fr;
+    grid-template-rows: .1fr 1fr 1fr .2fr;
 }
 header {
   grid-area: head;
@@ -35,7 +35,7 @@ header {
     "b b c"
     "d d d";
   grid-template-columns: 1fr 1fr .5fr;
-  grid-template-rows: 1fr 1fr 1fr 1.5fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   background-color: white;
 }
 
@@ -61,6 +61,11 @@ header {
 } 
 .item5 { 
   grid-area: d;
+  border-top: 2px solid rgb(227, 227, 227);
+  padding-top: 4em;
+}
+.item6{
+  grid-area: e;
 }
 
 footer {

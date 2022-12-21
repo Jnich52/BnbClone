@@ -13,7 +13,7 @@ app.use(express.json());
 
 //Routes
 app.get('/', (req,res)=>{
-    res.status(200).send('Hello World');
+    res.status(200).send('Hello World!');
 });
 
 app.get('/api/', (req, res) => {
@@ -55,6 +55,7 @@ app.get('/api/reviews', (req,res) =>{
       res.status(404).send("Page Not Found")
     }
   }
+  getReviews();
 })
 
 app.get('/api/users', (req, res) => {
