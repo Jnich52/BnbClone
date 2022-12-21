@@ -24,10 +24,10 @@ const AmenitiesModal = () => {
         Show all amenities
       </Button>
 
-      <Modal show={show} size='xl' onHide={handleClose}>
-        <Modal.Header className='modal-header' closeButton>
+      <Modal className='properties-modal' size='lg' fullscreen ='lg-down'  scrollable centered  show={show} onHide={handleClose}>
+        <Modal.Header className='properties-modal-header' closeButton>
         </Modal.Header>
-        <Modal.Body className='modal-body'>
+        <Modal.Body className='properties-modal-body'>
         </Modal.Body>
       </Modal>
     </Card>

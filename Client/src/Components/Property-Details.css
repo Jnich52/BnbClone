@@ -2,16 +2,18 @@
   display: flex;
   flex-flow: column nowrap;
   border: none;
+  max-height: max-content;
 }
 
 .card{
+  display: flex;
+  flex-flow: column nowrap;
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
   color: #222222;
   font-size: 1rem;
   line-height: 1.5rem;
   min-height: 4rem;
-  max-height: 15rem;
   min-width: 26.25rem;
   border: none;
 }
@@ -26,12 +28,11 @@
 }
 
 .card-body{
-  max-height: 9rem;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: 'ellipsis'
 }
 
-.btn{
+.prop-details-btn{
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -72,53 +73,46 @@
   height: 1.625rem;
 }
 
-.modal{
+.properties-modal{
   display: flex;
   flex-flow: column nowrap;
 }
 
-.modal-header{
+.properties-modal-header{
   display: flex;
-  justify-items: left;
   color: rgb(34,34,34);
   font-size: 1rem;
   font-weight: 800;
   line-height: inherit;
-  border-bottom: none;
+  border-bottom: .15rem solid black;
   padding: 1.5rem 0 1.5rem 0;
 }
 
-.modal-header .btn-close{
-  max-height: 4rem;
+.properties-modal-header .btn-close{
   padding: 0.5rem 0.5rem;
   margin-left: 1rem;
-  margin-top: .25rem;
-}
-
-.btn-close {
-  display: flex;
-  justify-self: left;
   border-radius: 1rem;
   background-size: .625rem;
+  cursor: pointer;
 }
 
-.btn-close:hover{
+.properties-modal-header .btn-close:hover{
   background-color: #f0f0f0;
 }
 
-.btn-close:focus{
+.properties-modal-header .btn-close:focus{
   border: none;
   outline: none;
 }
 
-.modal-title{
+.properties-modal-title{
 padding-left: 2rem;
 }
 
-.modal-body{
+.properties-modal-body{
   display: flex;
   flex-flow: row wrap;
-  padding: 2rem;
+  padding: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
   justify-content: space-between;
@@ -140,7 +134,7 @@ h4{
 .modal-para{
   display: flex;
   flex-flow: column nowrap;
-  flex-basis: 500px;
+  flex: 375px;
   padding-bottom: 1rem;
 }
 
