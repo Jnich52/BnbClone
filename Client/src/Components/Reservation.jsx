@@ -11,6 +11,7 @@ function Reservation(props) {
   const [defaultRate, setDefaultRate] = useState(1000);
   const [nightlyRate, setNightlyRate] = useState(null);
   const [numberOfNights, setNumberOfNights] = useState(2);
+  const [reservationData, setReservationData] = useState({})
 
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(1);
@@ -24,8 +25,9 @@ function Reservation(props) {
   function LoadingButton() {
     useEffect(() => {
       if (isLoading) {
-        getCustomersData();
         simulateNetworkRequest().then(() => {
+          getCustomersData();
+          console.log(reservationData)
           setLoading(false);
         });
       }
@@ -91,9 +93,10 @@ function Reservation(props) {
 
 
   const getCustomersData = () => {
+
     axios
     .get("https://backendbnb.onrender.com/api/reservations")
-    .then(data => console.log(data.data))
+    .then(data => setReservationData(data.data[0]))
     .catch(error => console.log(error));
     };
 
