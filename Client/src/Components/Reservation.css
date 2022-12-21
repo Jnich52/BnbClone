@@ -34,7 +34,7 @@
 
 .glow-button:hover {
     color: black;
-    box-shadow: 15px 15px black;
+    box-shadow: 5px 5px black;
     transform: translate(-5px)
 }
 
@@ -77,4 +77,8 @@
 
 .rs-picker-menu{
     z-index: 99999 !important;
+}
+
+.rs-picker-daterange{
+    min-width: 100% !important;
 }
