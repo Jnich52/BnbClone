@@ -2,7 +2,6 @@
   display: flex;
   flex-flow: column nowrap;
   border: none;
-  max-height: min-content;
 }
 
 .card{
@@ -14,7 +13,6 @@
   min-height: 4rem;
   max-height: 15rem;
   min-width: 26.25rem;
-  max-width: 70rem;
   border: none;
 }
 

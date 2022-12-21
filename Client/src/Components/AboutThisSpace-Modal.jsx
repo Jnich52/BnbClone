@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Button, Modal, CloseButton } from 'react-bootstrap';
+import { Card, Button, Modal, } from 'react-bootstrap';
 
 const AboutThisSpaceModal = () => {
 
