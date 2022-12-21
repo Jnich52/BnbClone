@@ -9,6 +9,7 @@ import Navbar from './Components/Navbar.jsx'
 import Footer_Section from './Components/Footer-Section';
 import './Components/Navbar.css'
 import Other_Options from './Components/Other-Options';
+import axios from 'axios';
 
 
 
