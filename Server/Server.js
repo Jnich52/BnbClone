@@ -74,6 +74,24 @@ app.get('/api/users', (req, res) => {
   getUsers();
 })
 
+
+//GET ALL RESERVATION DATA
+app.get('/api/reservations', (req, res) => {
+    
+  async function getReservations() {
+      try {
+        client.query(`SELECT * FROM reservations`)
+        .then(result =>{
+          res.status(200).send(result.rows)
+        })
+      } catch (error) {
+        console.error(error);
+        res.status(404).send("Page Not Found")
+      }
+    }
+  getReservations();
+})
+
 app.listen(PORT,()=>{
     console.log(`
     Server Status: Live
