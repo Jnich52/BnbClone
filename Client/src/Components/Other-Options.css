@@ -1,0 +1,42 @@
+.other-section-all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.other-section-explore{
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 2em;
+    font-size: large;
+    font-weight: bold;
+}
+#lineBreak{
+    width: 100%;
+    border-bottom: 2px solid rgb(227, 227, 227);
+}
+.other-section-explore-places{
+    display: flex;
+    font-size: medium;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    row-gap: 1em;
+    justify-content: flex-start;
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+.other-section-explore-places > a{
+    flex: 1 0 25%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+}
+.other-section-explore-places > a:hover{
+    cursor: pointer;
+}
+
+.other-section-unique{
+    margin-left: 20%;
+    margin-right: 20%;
+    font-weight: bold;
+}

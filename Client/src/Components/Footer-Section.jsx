@@ -3,7 +3,7 @@ import './Footer-Section.css'
 const Footer_Section = (props) => {
 
     return(
-        <div id="footer-section-all">
+        <div id="footer-section-bottom-all">
             <div id="footer-details-top">
                 <section id="footer-support">Support
                     <a>Help Center</a>
