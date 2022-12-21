@@ -4,7 +4,7 @@ const Other_Options = () => {
     return(
         <div className="other-section-all">
             <div className="other-section-explore">
-            Explore other options around
+            Explore other options in and around Potosi
                 <div className="other-section-explore-places">
                     <a>St. Louis</a>
                     <a>Saint Charles</a>
@@ -21,8 +21,18 @@ const Other_Options = () => {
                 </div>
             </div>
             <div className="other-section-unique">
-            Unique stays on UpInTheAirbnb
+            Unique stays on Up In The AirBnb
+                <div className="other-section-unique-options">
+                    <a>Beach House Rentals</a>
+                    <a>Glamping Rentals</a>
+                    <a>Treehouse Rentals</a>
+                    <a>Cabin Rentals</a>
+                    <a>Tiny House Rentals</a>
+                    <a>Camper Rentals</a>
+                    <a>Lakehouse Rentals</a>
+                </div>
             </div>
+            <div className="other-section-path">{`Up In The AirBnb > United States > Missouri > Meramec River`}</div>
             <div id="lineBreak"></div>
         </div>
     )
