@@ -4,30 +4,29 @@ DROP TABLE IF EXISTS REVIEW;
 CREATE TABLE USERS (
     id serial Primary Key,
     Name varchar(50)
-)
+);
 
-CREATE TABLE REVIEW (
+CREATE TABLE REVIEWS (
     id serial Primary Key,
     user_id Int,
     comment text,
-    cleanliness TINYINT,
-    checkin TINYINT,
-    location TINYINT,
-    communication TINYINT,
-    accuracy TINYINT,
+    cleanliness SmallInt,
+    checkin SmallInt,
+    location SmallInt,
+    communication SmallInt,
+    accuracy SmallInt,
+    FOREIGN KEY(user_id) REFERENCES USERS(id) ON DELETE CASCADE
+);
 
-    FOREIGN KEY(user_id) REFERENCES USERS(id) ON DELETE CASCADE,
-)
-
-INSERT INTO USERS (name) VALUES 
+INSERT INTO USERS (Name) VALUES 
 ('Jordan'), ('Brandon'), ('Gabe'), ('Jacquon'),
 ('Brian'), ('Bain'), ('Aaron'), ('David'),
 ('Simon'), ('Alex'), ('Bekmambet'), ('Jullian'),
 ('Roohullah'), ('Scott'), ('Dustin'), ('Huy'),
-('Fernando'), ('Jou'), ('Travis'), ('Jarret')
-('Kaydynce'), ('Jonathan')
+('Fernando'), ('Jou'), ('Travis'), ('Jarret'),
+('Kadynce'), ('Jonathan');
 
-INSERT INTO REVIEW (user_id, comment, cleanliness, checkin, location, communication, accuracy) VALUES 
+INSERT INTO REVIEWS (user_id, comment, cleanliness, checkin, location, communication, accuracy) VALUES 
 (1, 'The quick brown fox jumps over the lazy dog.', 3.8, 0.4, 2.1, 4.2, 1.9),
 (2,'She sells sea shells by the sea shore.', 1.3, 4.7, 3.9, 0.2, 2.4),
 (3,'The rain in Spain stays mainly in the plain.', 4.1, 2.6, 0.8, 1.7, 3.5),
@@ -49,4 +48,27 @@ INSERT INTO REVIEW (user_id, comment, cleanliness, checkin, location, communicat
 (19,'Jackdaws love my big sphinx of quartz.', 2.9, 1.8, 4.4, 3.1, 0.3),
 (20,'A quick movement of the enemy will jeopardize six guns.', 1.7, 3.9, 2.2, 0.5, 4.8),
 (21,'The quick brown fox jumps over the lazy dog''s back.', 4.0, 2.3, 1.3, 3.8, 0.6),
-(22,'A wickedly ambitious king played with a jester.', 3.2, 0.2, 2.5, 1.0, 4.7),
+(22,'A wickedly ambitious king played with a jester.', 3.2, 0.2, 2.5, 1.0, 4.7);
+
+
+UPDATE USERS SET joined='Feburary 2022' WHERE id=2;
+UPDATE USERS SET joined='March 2022' WHERE id=3;
+UPDATE USERS SET joined='April 2022' WHERE id=4;
+UPDATE USERS SET joined='May 2022' WHERE id=5;
+UPDATE USERS SET joined='June 2022' WHERE id=6;
+UPDATE USERS SET joined='July 2022' WHERE id=7;
+UPDATE USERS SET joined='January 2019' WHERE id=8;
+UPDATE USERS SET joined='August 2022' WHERE id=9;
+UPDATE USERS SET joined='September 2022' WHERE id=10;
+UPDATE USERS SET joined='October 2022' WHERE id=11;
+UPDATE USERS SET joined='November 2022' WHERE id=12;
+UPDATE USERS SET joined='December 2022' WHERE id=13;
+UPDATE USERS SET joined='January 2021' WHERE id=14;
+UPDATE USERS SET joined='Feburary 2021' WHERE id=15;
+UPDATE USERS SET joined='March 2021' WHERE id=16;
+UPDATE USERS SET joined='April 2021' WHERE id=17;
+UPDATE USERS SET joined='May 2021' WHERE id=18;
+UPDATE USERS SET joined='June 2021' WHERE id=19;
+UPDATE USERS SET joined='July 2021' WHERE id=20;
+UPDATE USERS SET joined='August 2021' WHERE id=21;
+UPDATE USERS SET joined='September 2021' WHERE id=22;

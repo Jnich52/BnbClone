@@ -13,25 +13,24 @@ function Reservation(props) {
     const [nightlyRate, setNightlyRate] = useState(null);
     const [numberOfNights, setNumberOfNights] = useState(2);
 
-    const [adults, setAdults] = useState(1);
-    const [children, setChildren] = useState(1);
-    const [infants, setInfants] = useState(0);
-    const [pets, setPets] = useState(0);
+  const [adults, setAdults] = useState(1);
+  const [children, setChildren] = useState(1);
+  const [infants, setInfants] = useState(0);
+  const [pets, setPets] = useState(0);
 
-    function simulateNetworkRequest() {
-      return new Promise((resolve) => setTimeout(resolve, 2000));
-    }
-    
-    function LoadingButton() {
-        
-        useEffect(() => {
-          if (isLoading) {
-            simulateNetworkRequest().then(() => {
-              setLoading(false);
-            });
-          }
-        }, [isLoading]);
-      
+  function simulateNetworkRequest() {
+    return new Promise((resolve) => setTimeout(resolve, 2000));
+  }
+
+  function LoadingButton() {
+    useEffect(() => {
+      if (isLoading) {
+        simulateNetworkRequest().then(() => {
+          setLoading(false);
+        });
+      }
+    }, [isLoading]);
+
     const handleClick = () => setLoading(true);
       
         return (
@@ -49,37 +48,37 @@ function Reservation(props) {
         
       }
 
-      function minusAdult() {
-        adults > 0 ? setAdults(adults - 1) : ""
-      }
+  function minusAdult() {
+    adults > 0 ? setAdults(adults - 1) : "";
+  }
 
-      function plusAdult() {
-        adults + children < 10 ? setAdults(adults + 1) : ""
-      }
+  function plusAdult() {
+    adults + children < 10 ? setAdults(adults + 1) : "";
+  }
 
-      function minusChildren() {
-        children > 0 ? setChildren(children - 1) : ""
-      }
+  function minusChildren() {
+    children > 0 ? setChildren(children - 1) : "";
+  }
 
-      function plusChildren() {
-        adults + children < 10 ? setChildren(children + 1) : ""
-      }
+  function plusChildren() {
+    adults + children < 10 ? setChildren(children + 1) : "";
+  }
 
-      function minusInfants() {
-        infants > 0 ? setInfants(infants - 1) : ""
-      }
+  function minusInfants() {
+    infants > 0 ? setInfants(infants - 1) : "";
+  }
 
-      function plusInfants() {
-        infants < 5 ? setInfants(infants + 1) : ""
-      }
+  function plusInfants() {
+    infants < 5 ? setInfants(infants + 1) : "";
+  }
 
-      function minusPets() {
-        pets > 0 ? setPets(pets - 1) : ""
-      }
+  function minusPets() {
+    pets > 0 ? setPets(pets - 1) : "";
+  }
 
-      function plusPets() {
-        pets < 5 ? setPets(pets + 1) : ""
-      }
+  function plusPets() {
+    pets < 5 ? setPets(pets + 1) : "";
+  }
 
       let calendarProps = { 
         numberOfNights, setNumberOfNights,
@@ -125,7 +124,7 @@ function Reservation(props) {
                 <span className="alignleft" style={{textDecoration:"none", fontSize:"small"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CHECK-IN</span>
                 <span className="alignright" style={{fontSize:"small"}}>CHECKOUT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             </div>
-            <div style={{clear: 'both'}}></div>
+            <div style={{ clear: "both" }}></div>
 
                 <Calendar style={{zIndex:'9999999999999999', width:'auto', overflow:'visible !important', position: 'absolute'}} {...calendarProps}/>
                 </div>
@@ -342,4 +341,4 @@ function Reservation(props) {
     )
 }
 
-export default Reservation
+export default Reservation;
