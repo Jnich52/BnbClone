@@ -1,4 +1,4 @@
-## --------------- _Galvanize MCSP-16 Team 5_ ---------------
+## --------------- _Galvanize MCSP-16 Team 1_ ---------------
 
 # Front End Capstone Project (FEC) : AirBnB UI Clone
 
