@@ -43,7 +43,7 @@
 ## Installation & Setup
 
 - Fork / clone down this repo : [Galvanize MCSP-16 : FEC Team 1 Github Repo](https://github.com/Jnich52/BnbClone)
-- Optional (2): Next, go to the 'config.js' file in the 'server' directory and alter the connection string to point at your localized db (docker container was used in this example)
+- Optional: Go to the 'config.js' file in the 'server' directory and alter the connection string to point at your localized db (docker container was used in this example)
 - cd into 'Client' and 'Server' directory and install module dependencies
 
 ## API Reference
