@@ -13,7 +13,7 @@ app.use(express.json());
 
 //Routes
 app.get('/', (req,res)=>{
-    res.status(200).send('Hello World');
+    res.status(200).send('Hello World!');
 });
 
 app.get('/api/', (req, res) => {
@@ -32,6 +32,67 @@ app.get('/api/', (req, res) => {
     fromAll();
 })
 
+//GETS REVIEWS AND USER WHO SUBMITTED
+app.get('/api/reviews', (req,res) =>{
+  async function getReviews(){
+    try {
+      client.query(`SELECT 
+      reviews."id",
+      users."name",
+      users."joined",
+      reviews."comment",
+      reviews."Location",
+      reviews."Communication",
+      reviews."Cleanliness",
+      reviews."Check-in",
+      reviews."Accuracy"
+      FROM reviews 
+      INNER JOIN 
+      users on users.id = reviews.user_id;`)
+      .then(result =>{
+        res.status(200).send(result.rows)
+      })
+
+    } catch (error) {
+      res.status(404).send("Page Not Found")
+    }
+  }
+  getReviews();
+})
+
+app.get('/api/users', (req, res) => {
+    
+  async function getUsers() {
+      try {
+        client.query(`SELECT * FROM users`)
+        .then(result =>{
+          res.status(200).send(result.rows)
+        })
+      } catch (error) {
+        console.error(error);
+        res.status(404).send("Page Not Found")
+      }
+    }
+  getUsers();
+})
+
+
+//GET ALL RESERVATION DATA
+app.get('/api/reservations', (req, res) => {
+    
+  async function getReservations() {
+      try {
+        client.query(`SELECT * FROM reservations`)
+        .then(result =>{
+          res.status(200).send(result.rows)
+        })
+      } catch (error) {
+        console.error(error);
+        res.status(404).send("Page Not Found")
+      }
+    }
+  getReservations();
+})
 
 app.listen(PORT,()=>{
     console.log(`

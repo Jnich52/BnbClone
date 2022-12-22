@@ -1,18 +1,17 @@
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
 import Calendar from "./Calendar.jsx";
 import "./Reservation.css";
 
-function Reservation() {
+function Reservation(props) {
   const [isLoading, setLoading] = useState(false);
-  const [start, startRef] = useState(null);
-  const [end, endRef] = useState(null);
   const [defaultRate, setDefaultRate] = useState(1000);
   const [nightlyRate, setNightlyRate] = useState(null);
   const [numberOfNights, setNumberOfNights] = useState(2);
-  const [refreshCalendar, setRefreshCalendar] = useState(null);
+  const [reservationData, setReservationData] = useState({})
 
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(1);
@@ -27,6 +26,8 @@ function Reservation() {
     useEffect(() => {
       if (isLoading) {
         simulateNetworkRequest().then(() => {
+          getCustomersData();
+          console.log(reservationData)
           setLoading(false);
         });
       }
@@ -40,7 +41,7 @@ function Reservation() {
         disabled={isLoading}
         onClick={!isLoading ? handleClick : null}
         style={{ fontSize: "large" }}
-        class="glow-button"
+        className="glow-button"
       >
         {isLoading ? "..." : "Reserve"}
       </Button>
@@ -84,16 +85,27 @@ function Reservation() {
     setNumberOfNights,
     nightlyRate,
     setNightlyRate,
-    refreshCalendar,
-    setRefreshCalendar,
   };
 
+  useEffect(() => {
+    console.log("toggle");
+  }, [props.lgShow]);
+
+
+  const getCustomersData = () => {
+
+    axios
+    .get("https://backendbnb.onrender.com/api/reservations")
+    .then(data => setReservationData(data.data[0]))
+    .catch(error => console.log(error));
+    };
+
   return (
-    <html>
+    <div>
       <div id="reservationCard" className="sticky">
         <div id="textbox">
           <span
-            class="alignleft"
+            className="alignleft"
             id="nightlyRate"
             style={{ fontSize: "xx-large", textDecoration: "none" }}
           >
@@ -103,39 +115,37 @@ function Reservation() {
                 ? nightlyRate.toLocaleString()
                 : defaultRate.toLocaleString()}
             </strong>
-            <text style={{ fontSize: "medium" }}>&nbsp; night</text>
+            <span style={{ fontSize: "medium" }}>&nbsp; night</span>
           </span>
-          <span class="alignright" style={{ marginTop: "4%" }}>
+          <span className="alignright" style={{ marginTop: "4%" }}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              v
-              ersion="1.1"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              version="1.1"
               id="Layer_1"
               x="0px"
               y="0px"
-              w
-              idth="122.88px"
+              width="122.88px"
               height="116.864px"
               viewBox="0 0 122.88 116.864"
-              enable-background="new 0 0 122.88 116.864"
-              xml:space="preserve"
+              enableBackground="new 0 0 122.88 116.864"
+              xmlSpace="preserve"
               style={{ height: "20px", width: "20px" }}
             >
               <g>
                 <polygon
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   points="61.44,0 78.351,41.326 122.88,44.638 88.803,73.491 99.412,116.864 61.44,93.371 23.468,116.864 34.078,73.491 0,44.638 44.529,41.326 61.44,0"
                 />
               </g>
             </svg>
 
-            <text style={{ fontSize: "medium" }}> 4.8 • </text>
-            <text style={{ textDecoration: "underline", fontSize: "medium" }}>
+            <span style={{ fontSize: "medium" }}> 4.8 • </span>
+            <span style={{ textDecoration: "underline", fontSize: "medium" }}>
               {" "}
               36 reviews{" "}
-            </text>
+            </span>
           </span>
         </div>
         <div style={{ clear: "both" }}></div>
@@ -159,12 +169,12 @@ function Reservation() {
           >
             <div id="textbox">
               <span
-                class="alignleft"
+                className="alignleft"
                 style={{ textDecoration: "none", fontSize: "small" }}
               >
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CHECK-IN
               </span>
-              <span class="alignright" style={{ fontSize: "small" }}>
+              <span className="alignright" style={{ fontSize: "small" }}>
                 CHECKOUT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </span>
             </div>
@@ -181,11 +191,11 @@ function Reservation() {
             />
           </div>
 
-          <div style={{ marginTop: "1%", paddingBottom: "18%" }}>
+          <div style={{ marginTop: "1%", paddingBottom: "20%"}}>
             <Dropdown
               className="d-inline mx-2"
               autoClose="outside"
-              align="xl: start"
+              align={{ lg: "end" }}
             >
               <Dropdown.Toggle
                 id="dropdown-autoclose-outside"
@@ -197,35 +207,41 @@ function Reservation() {
                   minWidth: "20em",
                 }}
               >
-                <text style={{ fontSize: "large" }}>
-                  <span class="alignleft" style={{ textDecoration: "none" }}>
+                <div style={{ fontSize: "large" }}>
+                  <div className="alignleft" style={{ textDecoration: "none" }}>
                     GUESTS
-                  </span>
+                  </div>
                   <br></br>
-                  <span class="alignleft" style={{ textDecoration: "none" }}>
+                  <div className="alignleft" style={{ textDecoration: "none" }}>
                     {adults + children} guests{" "}
                     {infants ? <>, {infants} infants </> : ""}{" "}
                     {pets ? <>, {pets} pets</> : ""}
-                  </span>
-                </text>
+                  </div>
+                </div>
               </Dropdown.Toggle>
 
-              <Dropdown.Menu style={{ cursor: "default !important" }}>
+              <Dropdown.Menu
+                style={{
+                  cursor: "default !important",
+                  marginTop: "5em",
+                  marginLeft: "5em",
+                }}
+              >
                 <Dropdown.Item
                   href="#"
                   style={{ cursor: "default !important" }}
                 >
                   <div id="textbox" style={{ marginRight: "15%" }}>
                     <span
-                      class="alignleft"
+                      className="alignleft"
                       style={{ marginTop: "5%", cursor: "default" }}
                     >
                       Adults
                     </span>
-                    <span class="alignright">
+                    <span className="alignright">
                       <div>
                         <button
-                          class="minus"
+                          className="minus"
                           type="button"
                           disabled=""
                           aria-label="subtract"
@@ -252,12 +268,12 @@ function Reservation() {
                           </svg>
                         </button>
 
-                        <text class="adults" style={{ margin: "15%" }}>
+                        <span className="adults" style={{ margin: "15%" }}>
                           {adults}
-                        </text>
+                        </span>
 
                         <button
-                          class="plus"
+                          className="plus"
                           type="button"
                           aria-label="add"
                           style={{ margin: "15%" }}
@@ -288,13 +304,13 @@ function Reservation() {
                 </Dropdown.Item>
                 <Dropdown.Item href="#">
                   <div id="textbox" style={{ marginRight: "15%" }}>
-                    <span class="alignleft" style={{ marginTop: "5%" }}>
+                    <span className="alignleft" style={{ marginTop: "5%" }}>
                       Children
                     </span>
-                    <span class="alignright">
+                    <span className="alignright">
                       <div>
                         <button
-                          class="minus"
+                          className="minus"
                           type="button"
                           disabled=""
                           aria-label="subtract"
@@ -321,12 +337,12 @@ function Reservation() {
                           </svg>
                         </button>
 
-                        <text class="children" style={{ margin: "15%" }}>
+                        <span className="children" style={{ margin: "15%" }}>
                           {children}
-                        </text>
+                        </span>
 
                         <button
-                          class="plus"
+                          className="plus"
                           type="button"
                           aria-label="add"
                           style={{ margin: "15%" }}
@@ -357,13 +373,13 @@ function Reservation() {
                 </Dropdown.Item>
                 <Dropdown.Item href="#">
                   <div id="textbox" style={{ marginRight: "15%" }}>
-                    <span class="alignleft" style={{ marginTop: "5%" }}>
+                    <span className="alignleft" style={{ marginTop: "5%" }}>
                       Infants
                     </span>
-                    <span class="alignright">
+                    <span className="alignright">
                       <div>
                         <button
-                          class="minus"
+                          className="minus"
                           type="button"
                           disabled=""
                           aria-label="subtract"
@@ -390,12 +406,12 @@ function Reservation() {
                           </svg>
                         </button>
 
-                        <text class="infants" style={{ margin: "15%" }}>
+                        <span className="infants" style={{ margin: "15%" }}>
                           {infants}
-                        </text>
+                        </span>
 
                         <button
-                          class="plus"
+                          className="plus"
                           type="button"
                           aria-label="add"
                           style={{ margin: "15%" }}
@@ -426,13 +442,13 @@ function Reservation() {
                 </Dropdown.Item>
                 <Dropdown.Item href="#">
                   <div id="textbox" style={{ marginRight: "15%" }}>
-                    <span class="alignleft" style={{ marginTop: "5%" }}>
+                    <span className="alignleft" style={{ marginTop: "5%" }}>
                       Pets
                     </span>
-                    <span class="alignright">
+                    <span className="alignright">
                       <div>
                         <button
-                          class="minus"
+                          className="minus"
                           type="button"
                           disabled=""
                           aria-label="subtract"
@@ -459,12 +475,12 @@ function Reservation() {
                           </svg>
                         </button>
 
-                        <text class="pets" style={{ margin: "15%" }}>
+                        <span className="pets" style={{ margin: "15%" }}>
                           {pets}
-                        </text>
+                        </span>
 
                         <button
-                          class="plus"
+                          className="plus"
                           type="button"
                           aria-label="add"
                           style={{ margin: "15%" }}
@@ -493,7 +509,7 @@ function Reservation() {
                     </span>
                   </div>
                 </Dropdown.Item>
-                <Dropdown.Item href="#">
+                <Dropdown.Item>
                   This place has a maximum of 2 guests, not <br></br>
                   including infants. Pets aren't allowed.
                 </Dropdown.Item>
@@ -504,19 +520,19 @@ function Reservation() {
         <LoadingButton id="reserveButton" />
         <br></br>
         <div>
-          <text style={{ fontSize: "large" }}>You won't be charged yet</text>
+          <span style={{ fontSize: "large" }}>You won't be charged yet</span>
         </div>{" "}
         <br></br>
         <div style={{ clear: "both" }}></div>
         <div id="textbox">
-          <span class="alignleft">
+          <span className="alignleft">
             $
             {nightlyRate
               ? nightlyRate.toLocaleString()
               : defaultRate.toLocaleString()}{" "}
             x {numberOfNights} nights
           </span>
-          <span class="alignright">
+          <span className="alignright">
             $
             {nightlyRate
               ? (nightlyRate * numberOfNights).toLocaleString()
@@ -525,31 +541,35 @@ function Reservation() {
         </div>
         <div style={{ clear: "both" }}></div>
         <div id="textbox">
-          <span class="alignleft">Cleaning fee</span>
-          <span class="alignright">
+          <span className="alignleft">Cleaning fee</span>
+          <span className="alignright">
             $
             {nightlyRate
-              ? (nightlyRate * numberOfNights * 0.22).toLocaleString()
-              : (defaultRate * numberOfNights * 0.22).toLocaleString()}
+              ? Math.floor(nightlyRate * numberOfNights * 0.22).toLocaleString()
+              : Math.floor(
+                  (defaultRate * numberOfNights * 0.22).toLocaleString()
+                )}
           </span>
         </div>
         <div style={{ clear: "both" }}></div>
         <div id="textbox">
-          <span class="alignleft">Service fee</span>
-          <span class="alignright">
+          <span className="alignleft">Service fee</span>
+          <span className="alignright">
             $
             {nightlyRate
-              ? (nightlyRate * numberOfNights * 0.17).toLocaleString()
-              : (defaultRate * numberOfNights * 0.17).toLocaleString()}
+              ? Math.floor(nightlyRate * numberOfNights * 0.17).toLocaleString()
+              : Math.floor(
+                  (defaultRate * numberOfNights * 0.17).toLocaleString()
+                )}
           </span>
         </div>
         <div style={{ clear: "both" }}></div>
         <hr></hr>
         <div id="textbox">
-          <span class="alignleft" style={{ textDecoration: "none" }}>
+          <span className="alignleft" style={{ textDecoration: "none" }}>
             <strong>Total before taxes</strong>
           </span>
-          <span class="alignright">
+          <span className="alignright">
             <strong>
               $
               {nightlyRate
@@ -575,17 +595,18 @@ function Reservation() {
           borderRadius: "12px",
           padding: "24px",
           width: "450px",
+          marginLeft: "5em",
         }}
       >
         <div id="textbox">
           <span
-            class="alignleft"
+            className="alignleft"
             style={{ textDecoration: "none", maxWidth: "300px" }}
           >
             <strong>This is a rare find.</strong> Joe Dirt's place on Airbnb is
             usually fully booked.
           </span>
-          <span class="alignright">
+          <span className="alignright">
             <svg
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
@@ -603,7 +624,7 @@ function Reservation() {
               <g stroke="none">
                 <path
                   d="m32.62 6 9.526 11.114-18.146 23.921-18.147-23.921 9.526-11.114z"
-                  fill-opacity=".2"
+                  fillOpacity=".2"
                 ></path>
                 <path d="m34.4599349 2 12.8243129 14.9616983-23.2842478 30.6928721-23.28424779-30.6928721 12.82431289-14.9616983zm-17.9171827 16h-12.52799999l18.25899999 24.069zm27.441 0h-12.528l-5.73 24.069zm-14.583 0h-10.802l5.4012478 22.684zm-15.92-12.86-9.30799999 10.86h11.89399999zm19.253-1.141h-17.468l2.857 12.001h11.754zm1.784 1.141-2.586 10.86h11.894z"></path>
               </g>
@@ -616,7 +637,7 @@ function Reservation() {
       <div>
         <div style={{ clear: "both" }}></div>
       </div>
-    </html>
+    </div>
   );
 }
 

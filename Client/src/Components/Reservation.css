@@ -6,6 +6,7 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
     width: 450px;
     margin-bottom: 5%;
+    margin-left: 5rem;
 }
 
 #reservationCardContainer {
@@ -33,7 +34,7 @@
 
 .glow-button:hover {
     color: black;
-    box-shadow: 15px 15px black;
+    box-shadow: 5px 5px black;
     transform: translate(-5px)
 }
 
@@ -76,4 +77,8 @@
 
 .rs-picker-menu{
     z-index: 99999 !important;
+}
+
+.rs-picker-daterange{
+    min-width: 100% !important;
 }

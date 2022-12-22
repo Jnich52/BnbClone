@@ -1,19 +1,16 @@
-import Category from "./Stats-Catagory"
+import Category from "./Stats-Catagory";
+import { ratingBarSetter } from "./Ratings-Section-Function";
 
-const Stats_Section = () => {
-    let myStyle ={
-        height: "5px",
-        width: "150px",
-        "--bs-progress-bar-bg": "black",
-        "--bs-progress-bg":"#c9c9c9"
-    }
-    let ratingArr = ["Cleanliness","Communication","Check-in","Accuracy", "Location","Value"]
+const Stats_Section = (props) => {
+
+    let obj = ratingBarSetter(props.pageData);
+    let arr = ['Cleanliness', 'Accuracy', 'Communication', 'Location', 'Check-in', 'Value'];
 
     return(
         <div className='stats-section'>
-            {ratingArr.map((item) => (
-            <Category cat={item}/>
-            ))}
+            {arr.map((item) => 
+            <Category category={item} {...obj}/>
+            )}
         </div>
     )
 }

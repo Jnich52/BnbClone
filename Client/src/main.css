@@ -1,24 +1,57 @@
-body{
-  display: flex;
-}
-
 #root{
-  display: flex;
   background-color: rgb(255, 255, 255);
-  margin-left: 20%;
-  margin-right: 20%;
   line-break: strict;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem; 
 }
+.App{
+  display: grid;
+  grid-template-areas: 
+    "head head head"
+    "main main main"
+    "main main main"
+    "foot foot foot";
+    grid-template-rows: .1fr 1fr 1fr .2fr;
+}
+header {
+  grid-area: head;
+  border-bottom: 2px solid rgb(224, 224, 224);
+}
+.grid-container {
+  grid-area: main;
 
-.item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
+  display: grid;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 0px;
+  margin-bottom: 0px;
 
-@media only screen and (max-width: 1200px){
+  padding: 0px !important;
+  grid-template-areas:
+    "a a a"
+    "b b c"
+    "b b c"
+    "d d d";
+  grid-template-columns: 1fr 1fr .5fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background-color: white;
+}
+
+.item1 { grid-area: a;
+  width: 100%; 
+  height: 10em;
+}
+.item3 { grid-area: b; }
+.item4 { 
+  grid-area: c;
+  position: sticky !important;
+  position: -webkit-sticky !important;
+  top: 3em;
+  height: auto;
+}
+@media only screen and (max-width: 1600px){
   .item4{
     display: none;
   }
@@ -26,27 +59,20 @@ body{
     margin-right: -15%;
   }
 } 
-
-.item4 { 
-  grid-area: right;
-  position: sticky !important;
-  position: -webkit-sticky !important;
-  top: 3em;
-  height: auto;
-}
 .item5 { 
-  grid-area: footer;
+  grid-area: d;
+  border-top: 2px solid rgb(227, 227, 227);
+  padding-top: 4em;
+}
+.item6{
+  grid-area: e;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'main main main main main right'
-    'footer footer footer footer footer footer';
-  gap: .625rem;
-  background-color: white;
-  padding: .625rem;
+footer {
+  grid-area: foot;
+  border-top: 2px solid rgb(227, 227, 227);
+  background-color: rgb(249, 249, 249);
+  
 }
 
 .grid-container > div {

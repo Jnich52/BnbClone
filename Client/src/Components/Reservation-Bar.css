@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1600px){
     .reservation-bar {
         display: none !important;
     }
@@ -21,9 +21,5 @@
     left: 0px !important;
     position: fixed !important;
     right: 0px !important;
-    z-index: 1999 !important;
-  }
-
-  .modal-body{
-    margin-top: -5%;
+    z-index: 99999 !important;
   }

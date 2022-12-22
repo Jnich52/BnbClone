@@ -8,9 +8,9 @@ import Stats_Section from "./Stats-Section";
 const Review_Comment_Container = (props) => {
     return (
         <div id="reviews-comment-section">
-            <Ratings_Head />
-            <Stats_Section />
-            <Reviews_Comments />
+            <Ratings_Head {...props}/>
+            <Stats_Section {...props}/>
+            <Reviews_Comments {...props}/>
         </div>
     )
 }
