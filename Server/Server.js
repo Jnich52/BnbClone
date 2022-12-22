@@ -34,23 +34,22 @@ app.get("/api/", (req, res) => {
 app.get("/api/reviews", (req, res) => {
   async function getReviews() {
     try {
-      client
-        .query(
-          `SELECT reviews.id,
-       users.name,
-       reviews.comment,
-       reviews.cleanliness,
-       reviews.checkin,
-       reviews.location,
-       reviews.communication,
-       reviews.accuracy
-       FROM reviews 
-       INNER JOIN 
-       users on users.id = reviews.user_id;`
-        )
-        .then((result) => {
-          res.status(200).send(result.rows);
-        });
+      client.query(`SELECT 
+      reviews."id",
+      users."name",
+      reviews."comment",
+      reviews."Location",
+      reviews."Communication",
+      reviews."Cleanliness",
+      reviews."Check-in",
+      reviews."Accuracy"
+      FROM reviews 
+      INNER JOIN 
+      users on users.id = reviews.user_id;`)
+      .then(result =>{
+        res.status(200).send(result.rows)
+      })
+
     } catch (error) {
       res.status(404).send("Page Not Found");
     }
