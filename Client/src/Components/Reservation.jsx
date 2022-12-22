@@ -11,7 +11,12 @@ function Reservation(props) {
   const [defaultRate, setDefaultRate] = useState(1000);
   const [nightlyRate, setNightlyRate] = useState(null);
   const [numberOfNights, setNumberOfNights] = useState(2);
-  const [reservationData, setReservationData] = useState({})
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+
+  const [getData, setGetData] = useState(false);
+  const [reservationData, setReservationData] = useState([]);
+  const [postData, setPostData] = useState({});
 
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(1);
@@ -27,8 +32,20 @@ function Reservation(props) {
       if (isLoading) {
         simulateNetworkRequest().then(() => {
           getCustomersData();
-          console.log(reservationData)
           setLoading(false);
+
+          let reservation = {
+            adults: adults,
+            checkin: startDate,
+            checkout: endDate,
+            children: children,
+            infants: infants,
+            nightlyrate: nightlyRate,
+            numberofnights: numberOfNights,
+            pets: pets,
+          };
+          console.log(reservation);
+          putCustomerData(reservation);
         });
       }
     }, [isLoading]);
@@ -85,24 +102,39 @@ function Reservation(props) {
     setNumberOfNights,
     nightlyRate,
     setNightlyRate,
+    startDate,
+    setStartDate,
+    endDate,
+    setEndDate,
   };
 
   useEffect(() => {
-    console.log("toggle");
-  }, [props.lgShow]);
-
+    console.log(reservationData);
+  }, [getData]);
 
   const getCustomersData = () => {
-
     axios
-    .get("https://backendbnb.onrender.com/api/reservations")
-    .then(data => setReservationData(data.data[0]))
-    .catch(error => console.log(error));
-    };
+      .get("https://backendbnb.onrender.com/api/reservations/")
+      // .get("http://localhost:5000/api/reservations/")
+      .then((data) => {
+        const fetchData = data.data;
+        setReservationData(fetchData);
+        setGetData(!getData);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  const putCustomerData = (reservation) => {
+    axios
+      .post("https://backendbnb.onrender.com/api/reservations/", reservation)
+      // .post("http://localhost:5000/api/reservations/", reservation)
+      .then((res) => console.log(res))
+      .catch((error) => console.log(error));
+  };
 
   return (
-    <div>
-      <div id="reservationCard" className="sticky">
+    <div id="reservationCardContainer">
+      <div id="reservationCard">
         <div id="textbox">
           <span
             className="alignleft"
@@ -141,10 +173,10 @@ function Reservation(props) {
               </g>
             </svg>
 
-            <span style={{ fontSize: "medium" }}> 4.8 • </span>
+            <span style={{ fontSize: "medium" }}> 2.99 • </span>
             <span style={{ textDecoration: "underline", fontSize: "medium" }}>
               {" "}
-              36 reviews{" "}
+              22 reviews{" "}
             </span>
           </span>
         </div>
@@ -191,20 +223,17 @@ function Reservation(props) {
             />
           </div>
 
-          <div style={{ marginTop: "1%", paddingBottom: "20%"}}>
-            <Dropdown
-              className="d-inline mx-2"
-              autoClose="outside"
-              align={{ lg: "end" }}
-            >
+          <div style={{ marginTop: "1%", paddingBottom: "20%" }}>
+            <Dropdown className="d-inline mx-2" autoClose="outside">
               <Dropdown.Toggle
                 id="dropdown-autoclose-outside"
                 style={{
-                  backgroundColor: "white",
+                  backgroundColor: "transparent",
                   color: "black",
                   borderColor: "white",
                   float: "left",
                   minWidth: "20em",
+                  marginTop: "-5%",
                 }}
               >
                 <div style={{ fontSize: "large" }}>
@@ -223,8 +252,6 @@ function Reservation(props) {
               <Dropdown.Menu
                 style={{
                   cursor: "default !important",
-                  marginTop: "5em",
-                  marginLeft: "5em",
                 }}
               >
                 <Dropdown.Item
@@ -594,14 +621,14 @@ function Reservation(props) {
           border: "1px solid rgb(221, 221, 221)",
           borderRadius: "12px",
           padding: "24px",
-          width: "450px",
+          width: "80%",
           marginLeft: "5em",
         }}
       >
         <div id="textbox">
           <span
             className="alignleft"
-            style={{ textDecoration: "none", maxWidth: "300px" }}
+            style={{ textDecoration: "none", width: "80%" }}
           >
             <strong>This is a rare find.</strong> Joe Dirt's place on Airbnb is
             usually fully booked.
