@@ -1,7 +1,6 @@
 import ProgressBar from "react-bootstrap/ProgressBar";
 
 const Category = (props) => {
-    console.log(props);
 
     return(
         <div className="stats-category">

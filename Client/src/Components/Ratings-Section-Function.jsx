@@ -1,5 +1,4 @@
 function ratingCalculator(ratingArray) {
-
     let accuracy = 0;
     let checkin = 0;
     let cleanliness = 0;
@@ -8,23 +7,22 @@ function ratingCalculator(ratingArray) {
     let value = 0;
 
     for (let i = 0; i < ratingArray.length; i++) {
-      accuracy += ratingArray[i].accuracy / ratingArray.length;
-      checkin += ratingArray[i].checkin / ratingArray.length;
-      cleanliness += ratingArray[i].cleanliness / ratingArray.length;
-      communication += ratingArray[i].communication / ratingArray.length;
-      location += ratingArray[i].location / ratingArray.length;
+      accuracy += ratingArray[i].Accuracy / ratingArray.length;
+      checkin += ratingArray[i]['Check-in'] / ratingArray.length;
+      cleanliness += ratingArray[i].Cleanliness / ratingArray.length;
+      communication += ratingArray[i].Communication / ratingArray.length;
+      location += ratingArray[i].Location / ratingArray.length;
 
       value += (
-      (ratingArray[i].accuracy / ratingArray.length+
-      ratingArray[i].checkin / ratingArray.length+
-      ratingArray[i].cleanliness / ratingArray.length+
-      ratingArray[i].communication / ratingArray.length+
-      ratingArray[i].location / ratingArray.length) / 5
+      (ratingArray[i].Accuracy / ratingArray.length+
+      ratingArray[i]['Check-in'] / ratingArray.length+
+      ratingArray[i].Cleanliness / ratingArray.length+
+      ratingArray[i].Communication / ratingArray.length+
+      ratingArray[i].Location / ratingArray.length) / 5
       );
 
     }
     let rating = Math.ceil((((accuracy + checkin + cleanliness + communication + location + value) / 6) * 100)/100);
-    
     return rating;
   }
 
@@ -46,27 +44,27 @@ function ratingCalculator(ratingArray) {
     let value = 0;
 
     for (let i = 0; i < ratingArray.length; i++) {
-        accuracy += ratingArray[i].accuracy / ratingArray.length;
-        checkin += ratingArray[i].checkin / ratingArray.length;
-        cleanliness += ratingArray[i].cleanliness / ratingArray.length;
-        communication += ratingArray[i].communication / ratingArray.length;
-        location += ratingArray[i].location / ratingArray.length;
-  
-        value += (
-        (ratingArray[i].accuracy / ratingArray.length+
-        ratingArray[i].checkin / ratingArray.length+
-        ratingArray[i].cleanliness / ratingArray.length+
-        ratingArray[i].communication / ratingArray.length+
-        ratingArray[i].location / ratingArray.length) / 5
-        );
+      accuracy += ratingArray[i].Accuracy / ratingArray.length;
+      checkin += ratingArray[i]['Check-in'] / ratingArray.length;
+      cleanliness += ratingArray[i].Cleanliness / ratingArray.length;
+      communication += ratingArray[i].Communication / ratingArray.length;
+      location += ratingArray[i].Location / ratingArray.length;
+
+      value += (
+      (ratingArray[i].Accuracy / ratingArray.length+
+      ratingArray[i]['Check-in'] / ratingArray.length+
+      ratingArray[i].Cleanliness / ratingArray.length+
+      ratingArray[i].Communication / ratingArray.length+
+      ratingArray[i].Location / ratingArray.length) / 5
+      );
       }
       let houseObj = {
-        accuracy: Math.ceil(accuracy * 100) / 100,
-        checkin: Math.ceil(checkin * 100) / 100,
-        cleanliness: Math.ceil(cleanliness * 100) / 100,
-        communication: Math.ceil(communication * 100) / 100,
-        location: Math.ceil(location * 100) / 100,
-        value: Math.ceil(value * 100) / 100
+        Accuracy: Math.ceil(accuracy * 100) / 100,
+        'Check-in': Math.ceil(checkin * 100) / 100,
+        Cleanliness: Math.ceil(cleanliness * 100) / 100,
+        Communication: Math.ceil(communication * 100) / 100,
+        Location: Math.ceil(location * 100) / 100,
+        Value: Math.ceil(value * 100) / 100
       };
       return houseObj;
   }
