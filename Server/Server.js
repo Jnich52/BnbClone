@@ -37,16 +37,16 @@ app.get('/api/reviews', (req,res) =>{
   async function getReviews(){
     try {
       client.query(`SELECT reviews.id,
-       users.name,
-       reviews.comment,
-       reviews.cleanliness,
-       reviews.checkin,
-       reviews.location,
-       reviews.communication,
-       reviews.accuracy
-       FROM reviews 
-       INNER JOIN 
-       users on users.id = reviews.user_id;`)
+      users.name,
+      reviews.comment,
+      reviews."Cleanliness",
+      reviews."Check-In",
+      reviews."Location",
+      reviews."Communication",
+      reviews."Accuracy"
+      FROM reviews 
+      INNER JOIN 
+      users on users.id = reviews.user_id;`)
       .then(result =>{
         res.status(200).send(result.rows)
       })
