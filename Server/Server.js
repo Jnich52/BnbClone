@@ -37,16 +37,16 @@ app.get('/api/reviews', (req,res) =>{
   async function getReviews(){
     try {
       client.query(`SELECT reviews.id,
-       users.name,
-       reviews.comment,
-       reviews.cleanliness,
-       reviews.checkin,
-       reviews.location,
-       reviews.communication,
-       reviews.accuracy
-       FROM reviews 
-       INNER JOIN 
-       users on users.id = reviews.user_id;`)
+      users.name,
+      reviews.comment,
+      reviews."Cleanliness",
+      reviews."Check-In",
+      reviews."Location",
+      reviews."Communication",
+      reviews."Accuracy"
+      FROM reviews 
+      INNER JOIN 
+      users on users.id = reviews.user_id;`)
       .then(result =>{
         res.status(200).send(result.rows)
       })
@@ -72,6 +72,24 @@ app.get('/api/users', (req, res) => {
       }
     }
   getUsers();
+})
+
+
+//GET ALL RESERVATION DATA
+app.get('/api/reservations', (req, res) => {
+    
+  async function getReservations() {
+      try {
+        client.query(`SELECT * FROM reservations`)
+        .then(result =>{
+          res.status(200).send(result.rows)
+        })
+      } catch (error) {
+        console.error(error);
+        res.status(404).send("Page Not Found")
+      }
+    }
+  getReservations();
 })
 
 app.listen(PORT,()=>{
