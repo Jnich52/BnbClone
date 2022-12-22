@@ -33,9 +33,12 @@ function App() {
       <header>
         <Navbar />
       </header>
-
       <div className="grid-container">
-        <div className="item1">I M A G E S</div>
+      <div class="item1">
+          {" "}
+          <span>Joe Dirt's Ultimate Tree Mansion</span>
+          <Pics />{" "}
+        </div>
         <div className="item3">
           <PropertyDetails />
         </div>
@@ -55,15 +58,7 @@ function App() {
         <Other_Options />
         <Footer_Section />
       </footer>
-      <div class="grid-container">
-        <div class="item1">
-          {" "}
-          <span>Joe Dirt's Ultimate Tree Mansion</span>
-          <Pics />{" "}
-        </div>
-
-        <Reservation_Bar {...propsObj} />
-      </div>
+        <Reservation_Bar {...propsObj} /> 
     </div>
   );
 }

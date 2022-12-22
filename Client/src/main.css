@@ -23,7 +23,7 @@ header {
   grid-area: main;
 
   display: grid;
-  margin-right: 25%;
+  margin-right: 15%;
   margin-left: 15%;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -42,7 +42,6 @@ header {
 .item1 {
   grid-area: a;
   width: 100%;
-  height: 10em;
 }
 .item3 {
   grid-area: b;
