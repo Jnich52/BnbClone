@@ -8,7 +8,7 @@ const Comment = (props) =>{
             </a>
             <div className="profile-text-wrapper">
                 <h4 className="profile-name">{props.name}</h4>
-                <div className="profile-join-date">{props.joined === undefined ? "Not Set" : props.joined}</div>
+                <div className="profile-join-date">{props.joined}</div>
             </div>
         </div>
         <div className="bottom">
