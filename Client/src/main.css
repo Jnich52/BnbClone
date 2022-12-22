@@ -13,7 +13,7 @@
     "main main main"
     "main main main"
     "foot foot foot";
-  grid-template-rows: 0.1fr 1fr 1fr 0.2fr;
+  grid-template-rows: 0.05fr 1fr 1fr 0.2fr;
 }
 header {
   grid-area: head;
