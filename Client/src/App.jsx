@@ -9,10 +9,26 @@ import Navbar from './Components/Navbar.jsx'
 import Footer_Section from './Components/Footer-Section';
 import './Components/Navbar.css'
 import Other_Options from './Components/Other-Options';
+import axios from 'axios';
 
 
 
 function App() {
+  const [pageData, setPageData] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(()=>{
+    axios.get('https://backendbnb.onrender.com/api/reviews')
+    .then((res)=>{
+      setPageData(res.data)
+      setIsLoading(false)
+    });
+  }, []);
+
+  let propsObj = {
+    pageData, setPageData,
+  }  
+
   return (
     <div className="App">
           
@@ -24,7 +40,7 @@ function App() {
         <div className="item1">I M A G E S</div>
         <div className="item3"><PropertyDetails /></div>
         <div className="item4"><Reservation/></div>
-        <div className="item5"><Review_Comment_Container/></div>
+        <div className="item5">{isLoading ? "Loading..." : <Review_Comment_Container {...propsObj} />}</div>
       </div>
 
       <footer>

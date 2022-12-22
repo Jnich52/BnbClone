@@ -39,6 +39,7 @@ app.get('/api/reviews', (req,res) =>{
       client.query(`SELECT 
       reviews."id",
       users."name",
+      users."joined",
       reviews."comment",
       reviews."Location",
       reviews."Communication",
