@@ -13,7 +13,7 @@
     "main main main"
     "main main main"
     "foot foot foot";
-  grid-template-rows: 0.1fr 1fr 1fr 0.2fr;
+  grid-template-rows: 0.05fr 1fr 1fr 0.2fr;
 }
 header {
   grid-area: head;
@@ -34,7 +34,7 @@ header {
     "b b c"
     "b b c"
     "d d d";
-  grid-template-columns: 1fr 1fr 0.5fr;
+  grid-template-columns: 1fr 0.5fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   background-color: white;
 }
@@ -51,7 +51,7 @@ header {
   min-width: fit-content;
   max-width: 450px;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 850px) {
   .item4 {
     display: none;
   }
