@@ -4,8 +4,8 @@
     justify-content: center;
 }
 .other-section-explore{
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 15%;
+    margin-right: 15%;
     padding-top: 2em;
     font-size: larger;
     font-weight: bold;
@@ -38,8 +38,8 @@
 }
 
 .other-section-unique{
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 15%;
+    margin-right: 15%;
     font-weight: 500;
     font-size: large;
     margin-top: 1em;
@@ -63,8 +63,8 @@
 }
 
 .other-section-path {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 15%;
+    margin-right: 15%;
     font-weight: 100;
     font-size: small;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

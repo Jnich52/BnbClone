@@ -1,8 +1,8 @@
 #footer-section-bottom-all{
     display: flex;
     flex-direction: column;
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-right: 15%;
+    margin-left: 15%;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 #footer-details-top{
