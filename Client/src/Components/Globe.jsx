@@ -1,9 +1,11 @@
 import React from "react";
 // import Image from "react-bootstrap";
+import Languagedrop from "./Languagedrop";
+import { Modal } from "bootstrap";
 
 const Globe = () => {
   const handleClick = () => {
-    window.location.assign("https://www.airbnb.com/");
+    <Languagedrop />;
   };
   return (
     <div onClick={handleClick}>
