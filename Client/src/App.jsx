@@ -48,7 +48,7 @@ function App() {
           <Footer_Section />
       </footer>
 
-      <Reservation_Bar />
+      <Reservation_Bar {...propsObj} />
     </div>
   )
 }

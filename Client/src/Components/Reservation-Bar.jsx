@@ -6,14 +6,14 @@ import Modal from "react-bootstrap/Modal";
 import "./Reservation.css";
 import "./Reservation-Bar.css";
 
-function Reservation_Bar() {
+function Reservation_Bar(props) {
   const [barNightlyRate, setBarNightlyRate] = useState(null);
   const [barStartDate, setBarStartDate] = useState(null);
   const [barEndDate, setBarEndDate] = useState(null);
   const [lgShow, setLgShow] = useState(false);
   const defaultRate = 1000;
 
-  let reservationProps = [
+  let reservationProps = {
     barNightlyRate,
     setBarNightlyRate,
     barStartDate,
@@ -21,8 +21,8 @@ function Reservation_Bar() {
     barEndDate,
     setBarEndDate,
     lgShow,
-    setLgShow,
-  ];
+    setLgShow
+  };
 
   return (
     <div className="reservation-bar">
@@ -66,7 +66,7 @@ function Reservation_Bar() {
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <Reservation {...reservationProps} />
+              <Reservation {...props} {...reservationProps} />
             </Modal.Body>
           </Modal>
         </span>

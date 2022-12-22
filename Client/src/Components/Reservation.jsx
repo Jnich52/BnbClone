@@ -1,10 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import {ratingCalculator, reviewCounter} from "./Ratings-Section-Function";
 import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
 import Calendar from "./Calendar.jsx";
 import "./Reservation.css";
+
 
 function Reservation(props) {
   const [isLoading, setLoading] = useState(false);
@@ -22,6 +24,9 @@ function Reservation(props) {
   const [children, setChildren] = useState(1);
   const [infants, setInfants] = useState(0);
   const [pets, setPets] = useState(0);
+
+  const [reviews, setReviews] = useState(5);
+  const [ratings, setRatings] = useState(5)
 
   function simulateNetworkRequest() {
     return new Promise((resolve) => setTimeout(resolve, 2000));
@@ -97,6 +102,16 @@ function Reservation(props) {
     pets < 5 ? setPets(pets + 1) : "";
   }
 
+  function handleRatings(){
+    setTimeout(() => {setRatings(ratingCalculator(props.pageData))}, 1000);
+    return ratings;
+  }
+
+  function handleReviews(){
+    setTimeout(() => {setReviews(reviewCounter(props.pageData))}, 1000);
+    return reviews;
+  }
+
   let calendarProps = {
     numberOfNights,
     setNumberOfNights,
@@ -149,8 +164,8 @@ function Reservation(props) {
             </strong>
             <span style={{ fontSize: "medium" }}>&nbsp; night</span>
           </span>
-          <span className="alignright" style={{ marginTop: "4%" }}>
-            <svg
+          <span className="alignright" style={{ marginTop: "2%" }}>
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
               version="1.1"
@@ -171,13 +186,10 @@ function Reservation(props) {
                   points="61.44,0 78.351,41.326 122.88,44.638 88.803,73.491 99.412,116.864 61.44,93.371 23.468,116.864 34.078,73.491 0,44.638 44.529,41.326 61.44,0"
                 />
               </g>
-            </svg>
+            </svg> */}
 
-            <span style={{ fontSize: "medium" }}> 2.99 • </span>
-            <span style={{ textDecoration: "underline", fontSize: "medium" }}>
-              {" "}
-              22 reviews{" "}
-            </span>
+            <div style={{ fontSize: "medium"}}>  &#9733; { handleRatings() } • { handleReviews() } reviews
+            </div>
           </span>
         </div>
         <div style={{ clear: "both" }}></div>
@@ -223,17 +235,14 @@ function Reservation(props) {
             />
           </div>
 
-          <div style={{ marginTop: "1%", paddingBottom: "20%" }}>
+          <div style={{ marginTop: "1%"}}>
             <Dropdown className="d-inline mx-2" autoClose="outside">
               <Dropdown.Toggle
                 id="dropdown-autoclose-outside"
                 style={{
                   backgroundColor: "transparent",
                   color: "black",
-                  borderColor: "white",
-                  float: "left",
-                  minWidth: "20em",
-                  marginTop: "-5%",
+                  borderColor: "white"
                 }}
               >
                 <div style={{ fontSize: "large" }}>
@@ -628,7 +637,7 @@ function Reservation(props) {
         <div id="textbox">
           <span
             className="alignleft"
-            style={{ textDecoration: "none", width: "80%" }}
+            style={{ textDecoration: "none"}}
           >
             <strong>This is a rare find.</strong> Joe Dirt's place on Airbnb is
             usually fully booked.
