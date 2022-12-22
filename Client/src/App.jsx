@@ -40,7 +40,7 @@ function App() {
           <PropertyDetails />
         </div>
         <div className="item4">
-          <Reservation />
+          <Reservation {...propsObj}  />
         </div>
         <div className="item5">
           {isLoading ? (
@@ -62,7 +62,7 @@ function App() {
           <Pics />{" "}
         </div>
 
-        <Reservation_Bar />
+        <Reservation_Bar {...propsObj} />
       </div>
     </div>
   );
