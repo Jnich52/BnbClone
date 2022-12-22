@@ -1,12 +1,13 @@
 import React from "react";
 // import Image from "react-bootstrap";
-
+import "./Bnb.css";
+// import logo from "../assets/pictures/logo.png";
 const Bnb = () => {
   const handleClick = () => {
     window.location.assign("https://www.airbnb.com/");
   };
   return (
-    <div onClick={handleClick}>
+    <div onClick={handleClick} className="hmebtn">
       {/* <Image> */}
       <svg
         width="102"

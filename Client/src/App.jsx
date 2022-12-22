@@ -7,6 +7,7 @@ import "./Components/Reservation.css";
 import PropertyDetails from "./Components/Property-Details";
 import Navbar from "./Components/Navbar.jsx";
 import "./Components/Navbar.css";
+import Pics from "./Components/Pics";
 
 function App() {
   return (
@@ -21,13 +22,13 @@ function App() {
 
       <div style={{ textAlign: "center" }}>
         <Navbar />
-      
-      <div style={{textAlign:'center'}}>
-        <Navbar/>
       </div>
-
       <div class="grid-container">
-        <div class="item1">I M A G E S</div>
+        <div class="item1">
+          {" "}
+          <span>Joe Dirt's Ultimate Tree Mansion</span>
+          <Pics />{" "}
+        </div>
 
         <div class="item3">
           <PropertyDetails />
