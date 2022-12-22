@@ -29,12 +29,12 @@ const AboutThisSpaceModal = () => {
         fill-rule="evenodd"></path></svg>
       </Button>
 
-      <Modal className = 'properties-modal' show={show} size='lg' fullscreen='lg-down' style={{color: '#222222', fontSize: '16px !important',}} onHide={handleClose}>
+      <Modal className = 'properties-modal' show={show} size='lg' fullscreen='lg-down' centered onHide={handleClose}>
         
         <Modal.Header className='properties-modal-header' closeButton>
         </Modal.Header>
         <Modal.Title className= 'properties-modal-title' style={{marginBottom: '1rem', fontWeight: '800'}}>About this space</Modal.Title>
-        <Modal.Body className='properties-modal-body'>
+        <Modal.Body className='properties-modal-body' style={{color: '#222222',}}>
             Come make long-lasting memories by the lake, take in these amazing sunsets and enjoy 
             lots of fun activities for the whole family - hiking, kayaking, horseback riding, swimming.
           <br/><br/>

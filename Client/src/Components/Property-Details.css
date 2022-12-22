@@ -52,20 +52,9 @@
     --bs-btn-active-color: black;
     --bs-btn-disabled-color: #6c757d;
     --bs-btn-disabled-border-color: transparent;
+    --bs-btn-hover-border-color: 'transparent',
     --bs-btn-box-shadow: none;
     text-decoration: underline;
-}
-
-.amenities-btn{
-  border-width: .0625rem;
-  border-color: #222222;
-  border-radius: 0.5rem;
-  border-style: solid;
-  padding: .8125rem 1.4375rem;
-  cursor: default;
-  text-decoration: none;
-  text-align: center;
-  --bs-btn-hover-border-color: black;
 }
 
 .aircover-img {
@@ -84,8 +73,8 @@
   font-size: 1rem;
   font-weight: 800;
   line-height: inherit;
-  border-bottom: .15rem solid black;
-  padding: 1.5rem 0 1.5rem 0;
+  border-bottom: none;
+  padding: 1.5rem 0 1rem 0;
 }
 
 .properties-modal-header .btn-close{
@@ -106,13 +95,14 @@
 }
 
 .properties-modal-title{
-padding-left: 2rem;
+padding-left: 1rem;
 }
 
 .properties-modal-body{
   display: flex;
   flex-flow: row wrap;
   padding: 1rem;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5rem;
   justify-content: space-between;
@@ -129,6 +119,7 @@ h4{
   border-bottom: 0.0625rem solid #DDDDDD;
   min-width: 100%;
   line-height: 1.25rem;
+  margin-bottom: .5rem;
 }
 
 .modal-para{
@@ -150,4 +141,19 @@ color: black;
 .modal-img{
   height: 2rem;
   margin-bottom: 1rem;
+}
+
+.svg-div{
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 1.5rem 0 1.5rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.amenities-svg{
+  display: block;
+  height: 24px;
+  width: 24px;
+  fill: currentcolor;
 }
