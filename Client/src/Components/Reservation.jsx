@@ -629,15 +629,14 @@ function Reservation(props) {
         style={{
           border: "1px solid rgb(221, 221, 221)",
           borderRadius: "12px",
-          padding: "24px",
-          width: "80%",
+          padding: "25px",
           marginLeft: "5em",
         }}
       >
         <div id="textbox">
           <span
             className="alignleft"
-            style={{ textDecoration: "none"}}
+            style={{ textDecoration: "none", maxWidth: "80%"}}
           >
             <strong>This is a rare find.</strong> Joe Dirt's place on Airbnb is
             usually fully booked.
