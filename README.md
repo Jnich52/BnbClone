@@ -31,7 +31,7 @@
 - Each team member is responsible for designing, integrating and styling their respective component
 - Implement React & use React life-cycle methods
 - Perform external API requests (GET, POST, DELETE, and PUT requests)
-- Connect an external PSQL database with tables containing information to display on the page
+- Generate, seed and connect to an external PSQL database with tables containing information to display on the page
 
 ## Table of Contents
 
