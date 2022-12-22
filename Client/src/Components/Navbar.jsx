@@ -3,8 +3,18 @@ import Bnb from "./Bnb";
 import Globe from "./Globe";
 import Yourhome from "./Yourhome";
 import SearchBar from "./Searchbar";
+import { Modal } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+// import Profile from "./Profile";
+import Languagedrop from "./Languagedrop";
+import Dropdownmenu from "./Dropdownmenu";
+import logo from "../assets/pictures/logo.png";
+
+// import Prodrop from "./Prodrop";
+// import DropdownMenu from "./Prodrop";
 
 function Navbar(props) {
+  const [lgShow, setLgShow] = useState(false);
   return (
     <nav className="navbar">
       <ul className="navbar-nav">{props.children}</ul>
@@ -24,12 +34,31 @@ function Navbar(props) {
       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
       <Yourhome />
-      <Globe />
+      {/* <Globe /> */}
 
       {/* globe icon*/}
       <p>&nbsp;&nbsp;&nbsp;</p>
-      <li>Profile</li>
+      {/* <Profile /> */}
       {/* user icon with three line drop down*/}
+      <Button onClick={() => setLgShow(true)}>
+        <Globe />
+        {/* <Dropdownmenu /> */}
+      </Button>
+      <Modal
+        show={lgShow}
+        size="lg"
+        onHide={() => setLgShow(false)}
+        aria-labelledby="example-modal-sizes-title-lg"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-modal-sizes-title-lg">Your Trip</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          .
+          <Languagedrop />
+        </Modal.Body>
+      </Modal>
+      <Dropdownmenu />
     </nav>
   );
 }
