@@ -36,9 +36,9 @@ app.get('/api/', (req, res) => {
 app.get('/api/reviews', (req,res) =>{
   async function getReviews(){
     try {
-      client.query(`SELECT reviews.id,
-      users.name,
-      reviews.comment,
+      client.query(`SELECT reviews."id",
+      users."name",
+      reviews."comment",
       reviews."Cleanliness",
       reviews."Check-In",
       reviews."Location",
