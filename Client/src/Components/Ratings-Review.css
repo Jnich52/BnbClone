@@ -1,7 +1,6 @@
 #reviews-comment-section{
     width: 100%;
     background: white;
-    z-index: 99999;
     position: relative;
 }
 
@@ -56,10 +55,9 @@
 }
 .profile-section-container{
     margin-top: 2em;
-
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
     
 }
 .commentEntry{
@@ -91,3 +89,6 @@
     overflow: hidden;
 }
 
+.progress-bar{
+    background-color: black;
+}
