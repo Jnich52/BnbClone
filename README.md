@@ -35,8 +35,8 @@
 
 ## Table of Contents
 
-- FEC Team 1 WireFrame : [FEC Team 1 Project on Render ](https://excalidraw.com/#room=7b56331e4f59efb5fed4,TnQQ0OvRWUqeOiLBnl4suQ)
-- FEC Team 1 Trello Board: [FEC Team 1 Project on Render ](https://trello.com/b/BdyYyCN8/fec-air-bnb-clone-group-1)
+- FEC Team 1 WireFrame : [FEC Team 1 Wire Frame on Excalidraw ](https://excalidraw.com/#room=7b56331e4f59efb5fed4,TnQQ0OvRWUqeOiLBnl4suQ)
+- FEC Team 1 Trello Board: [FEC Team 1 Trellow Board ](https://trello.com/b/BdyYyCN8/fec-air-bnb-clone-group-1)
 - Completed project here : [FEC Team 1 Project on Render ](https://bnbclone-q71s.onrender.com/)
 - **Note:** _Refresh the project page repeatedly to wake the Render server if page does not display immediately_
 
