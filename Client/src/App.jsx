@@ -23,7 +23,7 @@ function App() {
       <div className="grid-container">
         <div className="item1">I M A G E S</div>
         <div className="item3"><PropertyDetails /></div>
-        <div className="item4"><Reservation/></div>
+        <div className="item4"><Reservation {...propsObj} /></div>
         <div className="item5"><Review_Comment_Container/></div>
       </div>
 
