@@ -10,6 +10,7 @@ import Footer_Section from "./Components/Footer-Section";
 import "./Components/Navbar.css";
 import Other_Options from "./Components/Other-Options";
 import axios from "axios";
+import Pics from "./Components/Pics";
 
 function App() {
   const [pageData, setPageData] = useState();
