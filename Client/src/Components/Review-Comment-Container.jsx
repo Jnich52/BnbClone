@@ -10,7 +10,7 @@ const Review_Comment_Container = (props) => {
         <div id="reviews-comment-section">
             <Ratings_Head {...props}/>
             <Stats_Section {...props}/>
-            <Reviews_Comments />
+            <Reviews_Comments {...props}/>
         </div>
     )
 }

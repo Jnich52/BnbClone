@@ -5,13 +5,9 @@ const Stats_Section = (props) => {
 
     let obj = ratingBarSetter(props.pageData);
     let arr = ['Cleanliness', 'Accuracy', 'Communication', 'Location', 'Check-in', 'Value'];
-    let myStyle ={
-        "--bs-progress-bar-bg": "black",
-        "--bs-progress-bg":"#c9c9c9"
-    }
 
     return(
-        <div className='stats-section' style={myStyle}>
+        <div className='stats-section'>
             {arr.map((item) => 
             <Category category={item} {...obj}/>
             )}
