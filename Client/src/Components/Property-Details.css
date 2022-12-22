@@ -2,19 +2,19 @@
   display: flex;
   flex-flow: column nowrap;
   border: none;
-  max-height: min-content;
+  max-height: max-content;
 }
 
 .card{
+  display: flex;
+  flex-flow: column nowrap;
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
   color: #222222;
   font-size: 1rem;
   line-height: 1.5rem;
   min-height: 4rem;
-  max-height: 15rem;
   min-width: 26.25rem;
-  max-width: 70rem;
   border: none;
 }
 
@@ -28,12 +28,11 @@
 }
 
 .card-body{
-  max-height: 9rem;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: 'ellipsis'
 }
 
-.btn{
+.prop-details-btn{
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -53,20 +52,9 @@
     --bs-btn-active-color: black;
     --bs-btn-disabled-color: #6c757d;
     --bs-btn-disabled-border-color: transparent;
+    --bs-btn-hover-border-color: 'transparent',
     --bs-btn-box-shadow: none;
     text-decoration: underline;
-}
-
-.amenities-btn{
-  border-width: .0625rem;
-  border-color: #222222;
-  border-radius: 0.5rem;
-  border-style: solid;
-  padding: .8125rem 1.4375rem;
-  cursor: default;
-  text-decoration: none;
-  text-align: center;
-  --bs-btn-hover-border-color: black;
 }
 
 .aircover-img {
@@ -74,53 +62,47 @@
   height: 1.625rem;
 }
 
-.modal{
+.properties-modal{
   display: flex;
   flex-flow: column nowrap;
 }
 
-.modal-header{
+.properties-modal-header{
   display: flex;
-  justify-items: left;
   color: rgb(34,34,34);
   font-size: 1rem;
   font-weight: 800;
   line-height: inherit;
   border-bottom: none;
-  padding: 1.5rem 0 1.5rem 0;
+  padding: 1.5rem 0 1rem 0;
 }
 
-.modal-header .btn-close{
-  max-height: 4rem;
+.properties-modal-header .btn-close{
   padding: 0.5rem 0.5rem;
   margin-left: 1rem;
-  margin-top: .25rem;
-}
-
-.btn-close {
-  display: flex;
-  justify-self: left;
   border-radius: 1rem;
   background-size: .625rem;
+  cursor: pointer;
 }
 
-.btn-close:hover{
+.properties-modal-header .btn-close:hover{
   background-color: #f0f0f0;
 }
 
-.btn-close:focus{
+.properties-modal-header .btn-close:focus{
   border: none;
   outline: none;
 }
 
-.modal-title{
-padding-left: 2rem;
+.properties-modal-title{
+padding-left: 1rem;
 }
 
-.modal-body{
+.properties-modal-body{
   display: flex;
   flex-flow: row wrap;
-  padding: 2rem;
+  padding: 1rem;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.5rem;
   justify-content: space-between;
@@ -137,12 +119,13 @@ h4{
   border-bottom: 0.0625rem solid #DDDDDD;
   min-width: 100%;
   line-height: 1.25rem;
+  margin-bottom: .5rem;
 }
 
 .modal-para{
   display: flex;
   flex-flow: column nowrap;
-  flex-basis: 500px;
+  flex: 375px;
   padding-bottom: 1rem;
 }
 
@@ -158,4 +141,19 @@ color: black;
 .modal-img{
   height: 2rem;
   margin-bottom: 1rem;
+}
+
+.svg-div{
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 1.5rem 0 1.5rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.amenities-svg{
+  display: block;
+  height: 24px;
+  width: 24px;
+  fill: currentcolor;
 }
