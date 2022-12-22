@@ -188,7 +188,7 @@ function Reservation(props) {
               </g>
             </svg> */}
 
-            <div style={{ fontSize: "medium"}}>  &#9733; { handleRatings() } • { handleReviews() } reviews
+            <div style={{ fontSize: "medium"}}>  &#9733; { handleRatings() } • { handleReviews() }
             </div>
           </span>
         </div>

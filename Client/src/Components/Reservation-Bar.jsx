@@ -55,8 +55,7 @@ function Reservation_Bar(props) {
             show={lgShow}
             backdropClassName="reservation-bar-backdrop"
             contentClassName="reservation-bar-content"
-            size="fullscreen"
-            fullscreen="true"
+            size="lg"
             onHide={() => setLgShow(false)}
             aria-labelledby="example-modal-sizes-title-lg"
           >
