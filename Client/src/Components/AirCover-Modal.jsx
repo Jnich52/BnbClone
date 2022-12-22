@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Button, Modal, CloseButton } from 'react-bootstrap';
+import { Card, Button, Modal } from 'react-bootstrap';
 
 const AirCoverModal = () => {
   
@@ -21,10 +21,10 @@ const AirCoverModal = () => {
         Learn more
       </Button>
 
-      <Modal id='aircover-modal' size='xl' fullscree='lg-down' style={{color: '#717171',}} scrollable centered show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+      <Modal className='properties-modal' size='lg' fullscreen ='lg-down'  style={{color: '#717171',}}  scrollable centered  show={show} onHide={handleClose}>
+        <Modal.Header className = 'properties-modal-header' closeButton style={{justifyItems: 'left',}}>
         </Modal.Header>
-        <Modal.Body className='modal-body'>
+        <Modal.Body className='properties-modal-body'>
           <div className='first-para'>
             <img className='modal-img' src="https://a0.muscache.com/im/pictures/54e427bb-9cb7-4a81-94cf-78f19156faad.jpg" alt="AirCover"/>
             <p>
