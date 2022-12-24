@@ -53,7 +53,6 @@ function App() {
           )}
         </div>
       </div>
-
       <footer>
         <Other_Options />
         <Footer_Section />
