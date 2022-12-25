@@ -55,6 +55,9 @@
     padding-bottom: 2em;
     padding-top: 2em;
 }
+.other-section-unique-options > a:hover{
+    cursor: pointer;
+}
 
 .other-section-unique-options > a{
     flex: 0 0 25%;

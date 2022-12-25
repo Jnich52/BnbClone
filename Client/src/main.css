@@ -30,12 +30,12 @@ header {
 
   padding: 0px !important;
   grid-template-areas:
-    "a a a"
-    "b b c"
-    "b b c"
-    "d d d";
-  grid-template-columns: 1fr 0.5fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+    "a a"
+    "b c"
+    "b c"
+    "d d ";
+  grid-template-columns: 1.5fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr .7fr;
   background-color: white;
 }
 
@@ -63,9 +63,6 @@ header {
   grid-area: d;
   border-top: 2px solid rgb(227, 227, 227);
   padding-top: 4em;
-}
-.item6 {
-  grid-area: e;
 }
 
 footer {

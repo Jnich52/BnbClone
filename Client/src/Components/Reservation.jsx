@@ -630,7 +630,6 @@ function Reservation(props) {
           border: "1px solid rgb(221, 221, 221)",
           borderRadius: "12px",
           padding: "25px",
-          marginLeft: "5em",
         }}
       >
         <div id="textbox">
