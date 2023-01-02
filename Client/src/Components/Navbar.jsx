@@ -9,7 +9,9 @@ import { Button } from "react-bootstrap";
 import Languagedrop from "./Languagedrop";
 import Dropdownmenu from "./Dropdownmenu";
 import logo from "../assets/pictures/logo.png";
-
+import SaveButton from "./Save";
+import ShareButton from "./Share";
+import Star from "./Star";
 // import Prodrop from "./Prodrop";
 // import DropdownMenu from "./Prodrop";
 
@@ -62,5 +64,5 @@ function Navbar(props) {
     </nav>
   );
 }
-<img id="airbnb-logo" src="./airbnb.svg" class></img>;
+<img id="airbnb-logo" src="./airbnb.svg" className></img>;
 export default Navbar;

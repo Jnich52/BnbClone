@@ -5,7 +5,7 @@ function SearchBar({ placeholder, data }) {
   return (
     <div className="search">
       <div className="searchInputs">
-        <div style={{ position: "relative" }}>
+        <div style={{ position: "relative", fontWeight: "bold" }}>
           <input
             style={{ borderRadius: "17px" }}
             className="inputBox"

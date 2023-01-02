@@ -2,13 +2,13 @@ import React from "react";
 // import Image from "react-bootstrap";
 import Languagedrop from "./Languagedrop";
 import { Modal } from "bootstrap";
-
+import "./Globe.css";
 const Globe = () => {
   const handleClick = () => {
     <Languagedrop />;
   };
   return (
-    <div onClick={handleClick}>
+    <div id="globtn" onClick={handleClick}>
       {/* <Image> */}
       <svg
         viewBox="0 0 16 16"
@@ -20,7 +20,7 @@ const Globe = () => {
           display: "block",
           height: "16px",
           width: "16px",
-          fill: "currentcolor",
+          fill: "black",
           cursor: "pointer",
           fontWeight: "bold",
         }}
