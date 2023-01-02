@@ -14,7 +14,6 @@
   font-size: 1rem;
   line-height: 1.5rem;
   min-height: 4rem;
-  min-width: 26.25rem;
   border: none;
 }
 
@@ -29,7 +28,7 @@
 
 .card-body{
   overflow: hidden;
-  text-overflow: 'ellipsis'
+  text-overflow: ellipsis;
 }
 
 .prop-details-btn{
@@ -82,7 +81,7 @@
   margin-left: 1rem;
   border-radius: 1rem;
   background-size: .625rem;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .properties-modal-header .btn-close:hover{
@@ -90,8 +89,8 @@
 }
 
 .properties-modal-header .btn-close:focus{
-  border: none;
-  outline: none;
+  border: none !important;
+  outline: none !important;
 }
 
 .properties-modal-title{
@@ -143,17 +142,41 @@ color: black;
   margin-bottom: 1rem;
 }
 
-.svg-div{
+#svg-div{
   display: flex;
-  /* flex-flow: row nowrap; */
+  flex-flow: row nowrap;
   padding: 1.5rem 0 1.5rem 0;
   font-size: 1rem;
   font-weight: 400;
 }
 
-.amenities-svg{
+#svg-div-card{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  width: 50%;
+}
+
+#amenities-svg{
   display: block;
   height: 24px;
-  width: 24px;
-  fill: currentcolor;
+  min-width: 24px;
+  fill: black;
+}
+
+#amenities-desc{
+  margin-left: 1rem;
+}
+
+#amenities-line{
+  height: .0625rem;
+  background-color: rgb(221, 221, 221);
+  margin-bottom: 1rem;
+}
+
+#amenities-note{
+  font-size: .875rem;
 }
