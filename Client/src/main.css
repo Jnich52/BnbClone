@@ -1,19 +1,19 @@
-#root{
+#root {
   background-color: rgb(255, 255, 255);
   line-break: strict;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 1.25rem; 
+  line-height: 1.25rem;
 }
-.App{
+.App {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "head head head"
     "main main main"
     "main main main"
     "foot foot foot";
-    grid-template-rows: .1fr 1fr 1fr .2fr;
+  grid-template-rows: 0.05fr 1fr 1fr 0.2fr;
 }
 header {
   grid-area: head;
@@ -34,7 +34,7 @@ header {
     "b b c"
     "b b c"
     "d d d";
-  grid-template-columns: 1fr 1fr .5fr;
+  grid-template-columns: 1fr 0.5fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   background-color: white;
 }
@@ -51,20 +51,25 @@ header {
   top: 3em;
   height: auto;
 }
-@media only screen and (max-width: 1600px){
-  .item4{
+.item4 {
+  grid-area: c;
+  min-width: fit-content;
+  max-width: 450px;
+}
+@media only screen and (max-width: 850px) {
+  .item4 {
     display: none;
   }
-  .item3{
+  .item3 {
     margin-right: -15%;
   }
-} 
-.item5 { 
+}
+.item5 {
   grid-area: d;
   border-top: 2px solid rgb(227, 227, 227);
   padding-top: 4em;
 }
-.item6{
+.item6 {
   grid-area: e;
 }
 
@@ -72,7 +77,6 @@ footer {
   grid-area: foot;
   border-top: 2px solid rgb(227, 227, 227);
   background-color: rgb(249, 249, 249);
-  
 }
 
 .grid-container > div {

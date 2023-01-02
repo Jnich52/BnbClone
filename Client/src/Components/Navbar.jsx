@@ -8,17 +8,13 @@ import { Button } from "react-bootstrap";
 // import Profile from "./Profile";
 import Languagedrop from "./Languagedrop";
 import Dropdownmenu from "./Dropdownmenu";
-import logo from "../assets/pictures/logo.png";
-import SaveButton from "./Save";
-import ShareButton from "./Share";
-import Star from "./Star";
 // import Prodrop from "./Prodrop";
 // import DropdownMenu from "./Prodrop";
 
 function Navbar(props) {
   const [lgShow, setLgShow] = useState(false);
   return (
-    <nav className="navbar">
+    <nav className="navbar" style={{ paddingRight: "10%" }}>
       <ul className="navbar-nav">{props.children}</ul>
       {/* <li> Up In the Air Bnb </li> */}
       {/* <Bnb /> */}
@@ -39,7 +35,6 @@ function Navbar(props) {
       {/* <Globe /> */}
 
       {/* globe icon*/}
-      <p>&nbsp;&nbsp;&nbsp;</p>
       {/* <Profile /> */}
       {/* user icon with three line drop down*/}
       <Button onClick={() => setLgShow(true)}>
@@ -64,5 +59,8 @@ function Navbar(props) {
     </nav>
   );
 }
-<img id="airbnb-logo" src="./airbnb.svg" className></img>;
+{
+  /* <img id="airbnb-logo" src="./airbnb.svg" className></img>; */
+}
+//why wont this work
 export default Navbar;

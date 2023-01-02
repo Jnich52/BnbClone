@@ -1,25 +1,25 @@
-@media only screen and (min-width: 1600px){
-    .reservation-bar {
-        display: none !important;
-    }
-    .reservation-bar-backdrop {
-      display: none !important;
-    }
-    .reservation-bar-content {
-      display: none !important;
-    }
+@media only screen and (min-width: 850px) {
+  .reservation-bar {
+    display: none !important;
   }
-  
-  .reservation-bar{
-    background: white !important;
-    opacity: 1 !important;
-    height: 5rem !important;
-    border-color: lightgrey !important;
-    border-style: solid !important;
-    border-width: 2px !important;
-    bottom: 0px !important;
-    left: 0px !important;
-    position: fixed !important;
-    right: 0px !important;
-    z-index: 99999 !important;
+  .reservation-bar-backdrop {
+    display: none !important;
   }
+  .reservation-bar-content {
+    display: none !important;
+  }
+}
+
+.reservation-bar {
+  background: white !important;
+  opacity: 1 !important;
+  height: 5rem !important;
+  border-color: lightgrey !important;
+  border-style: solid !important;
+  border-width: 2px !important;
+  bottom: 0px !important;
+  left: 0px !important;
+  position: fixed !important;
+  right: 0px !important;
+  z-index: 99999 !important;
+}

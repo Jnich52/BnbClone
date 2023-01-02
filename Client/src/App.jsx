@@ -49,7 +49,7 @@ function App() {
                 <PropertyDetails />
               </div>
               <div className="item4">
-                <Reservation />
+                <Reservation {...propsObj} />
               </div>
               <div className="item5">
                 {isLoading ? (
