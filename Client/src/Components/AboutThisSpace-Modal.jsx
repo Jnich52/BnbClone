@@ -18,7 +18,7 @@ const AboutThisSpaceModal = () => {
         <br/><br/>
         Relax in this amazing Tree House right on Sayersbrook lake. You’ll have a private hot tub, 
         fireplace, fully furnished kitchen, beautiful handmade furniture, huge deck, and yes, those 
-        views of the 60-acre lake!!...
+        views of the 60-acre lake!!
       </Card.Body>
 
       <Button  variant='link' className='prop-details-btn' onClick={handleShow}>
