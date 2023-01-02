@@ -15,14 +15,16 @@ const Titlerow = () => {
       <div id="title-module-container">
         <Modal.Dialog
           className="modal-dialog"
-          style={{ backgroundColor: "transparent", position: "-moz-initial" }}
+          style={{
+            backgroundColor: "transparent",
+            position: "-moz-initial",
+          }}
         >
           <Modal.Body
             className="modal-body"
             style={{
               backgroundColor: "transparent",
               position: "-moz-initial",
-              textDecoration: "underline",
             }}
           >
             {/* <div id="title-title">{rentalData.title}</div> */}
@@ -32,7 +34,7 @@ const Titlerow = () => {
               </div>
               <div id="title-buttons">
                 <ShareButton />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp; &nbsp;
                 <SaveButton />
               </div>
             </div>

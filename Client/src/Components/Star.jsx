@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-
+import "./Star.css";
 const Star = () => {
   return (
     <div className="TitleStars">
@@ -22,17 +22,45 @@ const Star = () => {
           fill-rule="evenodd"
         ></path>
       </svg>{" "}
-      <span>
+      {/* <span> */}{" "}
+      {/* 4.85 ~ 22 reviews . Superhost . Las Vegas, Nevada, United States */}
+      <span
+        style={{
+          fontFamily: "Circular-Md",
+          fontSize: "15px",
+          fontWeight: "bold",
+          // textDecoration: "underline",
+          marginBottom: "20px",
+        }}
+      >
         {" "}
-        4.85 ~ 22 reviews . Superhost . Las Vegas, Nevada, United States
-        <span
-          style={{
-            fontFamily: "Circular-Md",
-            fontSize: "15px",
-            fontWeight: "bold",
-          }}
-        ></span>
+        4.85
       </span>
+      <span
+        style={{
+          fontFamily: "Circular-Md",
+          fontSize: "15px",
+          fontWeight: "bold",
+          textDecoration: "underline",
+          marginBottom: "20px",
+        }}
+      >
+        {" "}
+        22 reviews . Superhost . &nbsp;
+      </span>
+      <span
+        style={{
+          fontFamily: "Circular-Md",
+          fontSize: "15px",
+          fontWeight: "bold",
+          textDecoration: "underline",
+          marginBottom: "20px",
+        }}
+      >
+        {" "}
+        Las Vegas, Nevada, United States
+      </span>
+      {/* </span> */}
     </div>
   );
 };
