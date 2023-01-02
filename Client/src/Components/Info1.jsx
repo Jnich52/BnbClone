@@ -22,6 +22,7 @@ const Titlerow = () => {
             style={{
               backgroundColor: "transparent",
               position: "-moz-initial",
+              textDecoration: "underline",
             }}
           >
             {/* <div id="title-title">{rentalData.title}</div> */}

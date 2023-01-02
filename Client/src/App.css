@@ -2,6 +2,12 @@
 grid-area: a;
         width: 600px; 
         height: 40px;
-    background-color: blueviolet;
+padding-top: 20px;
       
+}
+#spanner{
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+
 }

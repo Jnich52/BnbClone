@@ -64,7 +64,7 @@ function App() {
       <div className="grid-container">
         <div className="item1">
           {" "}
-          {/* <span>Joe Dirt's Ultimate Tree Mansion</span> */}
+          <span id="spanner">Joe Dirt's Ultimate Tree Mansion</span>
           <Titlerow />
           {/* <Star />
           <ShareButton /> <SaveButton /> */}
