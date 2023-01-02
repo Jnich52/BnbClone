@@ -1,4 +1,5 @@
 import React from "react";
+import "./Yourhome.css";
 // import Image from "react-bootstrap";
 
 const Yourhome = () => {

@@ -11,6 +11,11 @@ import "./Components/Navbar.css";
 import Other_Options from "./Components/Other-Options";
 import axios from "axios";
 import Pics from "./Components/Pics";
+import Star from "./Components/Star";
+import ShareButton from "./Components/Share";
+import SaveButton from "./Components/Save";
+import Titlerow from "./Components/Info1";
+import "./App.css";
 
 function App() {
   const [pageData, setPageData] = useState();
@@ -43,7 +48,7 @@ function App() {
           <PropertyDetails />
         </div>
         <div className="item4">
-          <Reservation {...propsObj}  />
+          <Reservation {...propsObj} />
         </div>
         <div className="item5">
           {isLoading ? (
@@ -57,7 +62,21 @@ function App() {
         <Other_Options />
         <Footer_Section />
       </footer>
-        <Reservation_Bar {...propsObj} /> 
+      <div className="grid-container">
+        <div className="item1">
+          {" "}
+          <span id="spanner">Joe Dirt's Ultimate Tree Mansion</span>
+          <Titlerow />
+          {/* <Star />
+          <ShareButton /> <SaveButton /> */}
+          {/* <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </p>{" "} */}
+          {/* <ShareButton /> <SaveButton /> */}
+          <Pics />{" "}
+        </div>
+        <Reservation_Bar />
+      </div>
     </div>
   );
 }

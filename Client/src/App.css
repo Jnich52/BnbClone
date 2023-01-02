@@ -1,0 +1,13 @@
+.item1{
+grid-area: a;
+        width: 600px; 
+        height: 40px;
+padding-top: 20px;
+      
+}
+#spanner{
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+
+}
