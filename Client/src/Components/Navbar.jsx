@@ -37,7 +37,7 @@ function Navbar(props) {
       {/* globe icon*/}
       {/* <Profile /> */}
       {/* user icon with three line drop down*/}
-      <Button onClick={() => setLgShow(true)}>
+      <Button id='globe-btn' onClick={() => setLgShow(true)}>
         <Globe />
         {/* <Dropdownmenu /> */}
       </Button>

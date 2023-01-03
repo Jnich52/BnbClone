@@ -169,14 +169,16 @@ color: black;
 
 #amenities-desc{
   margin-left: 1rem;
+  color: rgb(34, 34, 34);
+}
+
+#amenities-desc-note{
+  color: rgb(113, 113, 113) !important;
+  font-size: 0.875rem;
 }
 
 #amenities-line{
   height: .0625rem;
   background-color: rgb(221, 221, 221);
   margin-bottom: 1rem;
-}
-
-#amenities-note{
-  font-size: .875rem;
 }
