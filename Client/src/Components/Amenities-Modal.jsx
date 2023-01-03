@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, Button, Modal } from "react-bootstrap";
+import axios from 'axios';
+
+
+
 
 const AmenitiesModal = () => {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -223,7 +226,7 @@ const AmenitiesModal = () => {
             </div>
 
             <div>
-              <div className="svg-div">
+              <div id ="svg-div">
               <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -264,7 +267,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -278,7 +281,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -292,7 +295,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -306,7 +309,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -332,7 +335,7 @@ const AmenitiesModal = () => {
               </h4>
             </div>
             <div>
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -351,7 +354,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -365,7 +368,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -382,7 +385,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -396,7 +399,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -426,7 +429,7 @@ const AmenitiesModal = () => {
             </div>
 
             <div>
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -455,7 +458,7 @@ const AmenitiesModal = () => {
             </div>
 
             <div>
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -469,7 +472,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -486,7 +489,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -500,7 +503,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -527,7 +530,7 @@ const AmenitiesModal = () => {
             </div>
 
             <div>
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -541,7 +544,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -555,7 +558,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -569,7 +572,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -595,7 +598,7 @@ const AmenitiesModal = () => {
               </h4>
             </div>
             <div>
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -625,7 +628,7 @@ const AmenitiesModal = () => {
             </div>
 
             <div>
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -644,7 +647,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -658,7 +661,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -672,7 +675,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -692,7 +695,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -712,7 +715,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -726,7 +729,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -740,7 +743,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -754,7 +757,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -768,7 +771,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -787,7 +790,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -801,7 +804,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -815,7 +818,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -829,7 +832,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -856,7 +859,7 @@ const AmenitiesModal = () => {
             </div>
 
             <div>
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -876,7 +879,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -895,7 +898,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -914,7 +917,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -945,7 +948,7 @@ const AmenitiesModal = () => {
               </h4>
             </div>
             <div>
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -959,7 +962,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -978,7 +981,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -992,7 +995,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -1006,7 +1009,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -1035,7 +1038,7 @@ const AmenitiesModal = () => {
               </h4>
             </div>
             <div>
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -1049,7 +1052,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -1063,7 +1066,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -1094,7 +1097,7 @@ const AmenitiesModal = () => {
               </h4>
             </div>
             <div>
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -1108,7 +1111,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -1139,7 +1142,7 @@ const AmenitiesModal = () => {
               </h4>
             </div>
             <div>
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -1155,7 +1158,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
@@ -1171,7 +1174,7 @@ const AmenitiesModal = () => {
               </div>
               <div id="amenities-line"></div>
 
-              <div className="svg-div">
+              <div id ="svg-div">
                 <svg
               id="amenities-svg"
               viewBox="0 0 32 32"
