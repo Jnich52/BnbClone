@@ -1,5 +1,7 @@
-/* .navbar {
-width: 1500px;
-
-flex-flow: left ;
-} */
+#globe-btn{
+  background-color: white;
+  border-color: white;
+  box-shadow: gray;
+  margin-right: -50px;
+  margin-left: -50px;
+}

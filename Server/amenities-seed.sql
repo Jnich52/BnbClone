@@ -5,7 +5,7 @@ CREATE TABLE amenities(
   name VARCHAR(255),
   notes VARCHAR(255),
   home_area VARCHAR(255),
-  amenities_link TEXT,  
+  amenities_link TEXT  
 );
 
 INSERT INTO amenities (name, notes, home_area, amenities_link) VALUES
