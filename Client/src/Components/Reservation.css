@@ -36,6 +36,10 @@
   width: 100% !important;
 }
 
+#dropdown-autoclose-outside{
+  margin-left: auto;
+}
+
 .glow-button:hover {
   color: black;
   box-shadow: 5px 5px black;
