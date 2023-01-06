@@ -36,10 +36,14 @@
   width: 100% !important;
 }
 
-.glow-button:hover {
+#reserveButton:hover {
   color: black;
   box-shadow: 5px 5px black;
   transform: translate(-5px);
+}
+
+#dropdown-autoclose-outside{
+  margin-left: auto;
 }
 
 .alignleft {
