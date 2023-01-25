@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import "./Pics.css";
+
 const Pics = () => {
   const [show, setShowPhotoModal] = useState(false);
 
